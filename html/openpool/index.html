@@ -84,7 +84,7 @@
 <pre class="prettyprint linenums">OpenPool op = new OpenPool(this);
 
 op.updateBalls();
-for (int i = 0; i < op.balls; i ++) {
+for (int i = 0; i &lt; op.balls; i ++) {
   Ball ball = op.balls[i];
   ellipse(ball.x, ball.y, 10, 10);
   if (ball.prev != null) {
@@ -102,8 +102,8 @@ for (int i = 0; i < op.balls; i ++) {
 p.start();
 
 int[] pockets = p.getPockets();
-for (int i = 0; i < pockets.length; i++) {
-  if (pockets[i] > 0) {
+for (int i = 0; i &lt; pockets.length; i++) {
+  if (pockets[i] &gt; 0) {
     print(pockets[i]);
     print(" balls fell in the pocket no.");
     println(i + 1);
