@@ -1,0 +1,613 @@
+doctype html
+html(lang='ja')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width,initial-scale=1')
+    meta(name='description', content='')
+    meta(name='author', content='加藤 淳')
+    meta(property='fb:admins', content='503220390')
+    link(rev='made', href='mailto:i@junkato.jp')
+    title 加藤 淳のポートフォリオ | junkato.jp
+    // Styles 
+    link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Droid+Sans')
+    link(href='/css/bootstrap.min.css', rel='stylesheet')
+    link(href='/css/main.css', rel='stylesheet')
+    // Le HTML5 shim, for IE6-8 support of HTML5 elements 
+    //      [if lt IE 9]>
+            <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+          <![endif]
+  body(data-spy='scroll', data-target='#navigation', data-offset='70')
+    .navbar.navbar-default.navbar-fixed-top(data-dropdown='dropdown', role='navigation')
+      .container
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navigation')
+            span.sr-only ナビの表示を切り替える
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='') 加藤 淳
+        #navigation.collapse.navbar-collapse
+          ul.nav.navbar-nav
+            li
+              a(href='#about') 自己紹介
+            li
+              a(href='#projects') プロジェクト
+            li
+              a(href='publications/') 受賞歴と発表文献
+            li
+              a(href='fun/') お楽しみ
+            li
+              a(href='#contact') 連絡先
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href='/ja/blog/')
+                | ブログ
+                i.blog.glyphicon.glyphicon-pencil
+            li
+              a(href='/')
+                | English
+                i.translation.glyphicon.glyphicon-text-background
+    // container 
+    .container
+      section
+        .row#firstsection
+          #profile.hidden-xs.hidden-sm.col-xs-6.col-sm-4.col-md-3
+            .thumbnail
+              img(src='/junkato.jpg', alt='Photo of Jun Kato', rel='tooltip', title='Hi! How are you?', width='260')
+          .col-sm-12.col-md-9
+            h1#about 自己紹介
+            //              
+                    <p id="vision">研究分野は<b>Human-Computer Interaction</b>全般で、とくにコンピュータを介した実世界と人の<a href="#" rel="tooltip" title="Physical Computing, Robot Application">インタラクション</a>の<a href="#" rel="tooltip" title="Prototyping Toolkit, Integrated Development Environment">開発手法</a>や<a href="#" rel="tooltip" title="Natural User Interface">入出力装置</a>に興味があります。誰もがITの力を借りて生活を便利で快適にできる、日曜大工になれるような未来ビジョンの実現に向けて、<b>実世界をプログラミングできる開発環境</b>を作っていきたいと考えています。</p>
+              
+            #vision
+              p
+                | 人とコンピュータの関係を考える学問
+                b Human-Computer Interaction
+                | の研究者です。コンピュータを介した実世界と人の
+                a(href='#', rel='tooltip', title='Physical Computing, Robot Application, Interactive Computer Vision') インタラクション
+                | の
+                a(href='#', rel='tooltip', title='Prototyping Toolkit, Integrated Development Environment') 開発手法
+                | や
+                a(href='#', rel='tooltip', title='Natural User Interface') 入出力装置
+                | の研究を行ってきました。
+              p
+                | 誰もがITの力で生活を便利で快適にできる、日曜大工になれるような未来ビジョンの実現に向けて、
+                b 日用品やさまざまなコンテンツにインタラクティビティを付与できる開発環境技術の応用研究
+                | を行っていきたいと考えています。さまざまな背景を持った人たちがそれぞれの方法で活用し、ときには協力し合えるような
+                a(href='#', rel='tooltip', title='Integrated {Development|Design} Environment')
+                  b 統合環境
+                | の設計に興味があります。
+            //              
+                    <p>博士課程の研究では、<b>写真や動画といった画像表現を統合開発<strong>環境</strong>(<abbr title="Integrated Development Environment">IDE</abbr>)に導入することでプログラミング体験を向上する手法</b>を提案しました。概要は「<a href="http://junkato.jp/publications/spro2014-kato-live-condensed.pdf">実世界Live Programmingの実現に向けて</a>」(<a href="http://togetter.com/li/710516">反響</a>・<a href="http://www.slideshare.net/arcatdmz/live-programming">スライド</a>)を、具体例は<a href="/ja/picode/">Picode</a>、<a href="/ja/dejavu/">DejaVu</a>、<a href="/ja/visionsketch/">VisionSketch</a>をご覧ください。</p>
+              
+            hr
+            ul
+              li
+                | 2014年4月-
+                a(href='https://www.aist.go.jp/') 産業技術総合研究所
+                a(href='https://www.itri.aist.go.jp/') 情報技術研究部門
+                a(href='https://staff.aist.go.jp/m.goto/MIG/index-j.html') メディアインタラクション研究グループ
+                | 研究員
+              li
+                | 2014年3月 博士(情報理工学)を
+                a(href='http://www.u-tokyo.ac.jp/index_j.html') 東京大学
+                | 大学院
+                a(href='http://www-ui.is.s.u-tokyo.ac.jp/~takeo/index-j.html') 五十嵐 健夫
+                | 教授の指導の下で取得
+              li
+                a(href='http://sigpx.org')
+                  abbr(title='Special Interest Group on Programming Experience') SIGPX
+                | 幹事（詳しくは
+                a(href='/resume.html')
+                  i.glyphicon.glyphicon-file
+                  | レジュメ
+                | をご覧ください）
+              //                
+                        <li><a href="http://www.u-tokyo.ac.jp/index_j.html">東京大学</a>大学院<a href="http://www.i.u-tokyo.ac.jp/">情報理工学系研究科</a> <a href="http://www.is.s.u-tokyo.ac.jp/">コンピュータ科学専攻</a> <a href="http://www-ui.is.s.u-tokyo.ac.jp/" class="external">五十嵐研究室（User Interface Research Lab.）</a>博士課程三年</li>
+                        <li><a href="http://designinterface.jp/">JST ERATO五十嵐デザインインタフェースプロジェクト</a> 研究補助員</li>
+                        <li><a href="http://www.jsps.go.jp/j-pd/">日本学術振興会</a> 特別研究員（DC1）</li>
+                        <li><a href="http://digitalmuseum.jp/">digitalmuseum</a> 主宰、<a href="http://ide.digitalmuseum.jp/Main_Page/ja">開発環境これくしょん</a>作成者（詳しくは<a href="/resume.html"><i class="glyphicon glyphicon-file"></i>レジュメ</a>をご覧ください）</li>
+                
+              li.visible-xs.visible-sm
+                a(href='/junkato.jpg')
+                  i.glyphicon.glyphicon-camera
+                  | 写真
+                | もあります
+        hr
+        .row
+          .col-md-9
+            h2#recent 近況
+            table.table.table-striped.table-condensed
+              tbody#recent_histories
+                tr
+                  td.nowrap 2017年10月19日
+                  td
+                    | 国際会議
+                    a(href='https://2017.splashcon.org/', title='The ACM SIGPLAN conference on Systems, Programming, Languages and Applications: Software for Humanity') SPLASH
+                    a(href='https://2017.splashcon.org/track/live-2017#program') LIVE 2017
+                    | で
+                    a(href='https://junkato.jp/ja/blog/2017/10/08/live-programming/') Live Programming
+                    | に関して基調講演します。
+                    a(href='https://sigpx.org/') SIGPX
+                    | で扱ってきたさまざまなトピックをカバーした情報処理学会 学会誌の小特集「
+                    a(href='https://sigpx.org/ipsj2017') プログラミング・エクスペリエンスの新潮流
+                    | 」でエディタを務めました。
+                tr
+                  td.nowrap 2017年9月20日
+                  td
+                    | 日本ソフトウェア科学会
+                    a(href='https://jssst2017.wordpress.com/') 第34回大会
+                    | の一般公開イベント
+                    a(href='https://jssst2017.wordpress.com/ftd/') Future Technology Design
+                    | で招待講演とパネルディスカッションに参加しました。
+                tr
+                  td.nowrap 2017年8月6日
+                  td
+                    | 6月末の
+                    abbr(title='Carnegie Mellon University') CMU
+                    abbr(title='Human-Computer Interaction Institute') HCII
+                    | での講演が
+                    a(href='https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=fd1c36b4-c0ad-49ef-b50c-aab0e5fa36b7') Web上でスライドとともに公開
+                    | されました。ほぼ最新の研究成果を盛り込んであり、これまでの研究生活を振り返る内容になっています。
+                tr#recent_histories_more
+                  td.nowrap(colspan='2', style='text-align:right;padding-right:0;')
+                    a.recent_histories_nav.btn.btn-primary(href='#', onclick='var n=3;var row=$('#recent_histories_more');var f=function(o){$.getJSON('./history/?offset='+o+'&numbers='+n,function(data){$.each(data['histories'],function(key,val){if(val['content']=='')return;row.before('<tr><td>'+val['date']+'</td><td>'+val['content']+'</td></tr>')});console.log(data);if(data['last']){row.remove()}else{var a=$('#recent_histories_more a.recent_histories_nav');a.removeAttr('onclick');a.unbind();var o_=o+n;a.click(function(){f(o_);return false});}})};f(n);return false')
+                      | もっと読む
+                      i.glyphicon.glyphicon-zoom-in
+                    a.btn.btn-default(href='/ja/history/')
+                      | 全部読む
+                      i.glyphicon.glyphicon-fullscreen
+          .col-md-3
+            h2#blog 最近のブログ
+            #blogfeed
+      section
+        h1#concepts 研究コンセプト
+        p 研究プロジェクトを通して提唱、実現してきたコンセプトをいくつか紹介しています。
+        .row
+          .project.col-xs-12.col-sm-6.col-md-6
+            a.thumbnail(href='/programming-with-examples')
+              .caption
+                h4 Programming with Examples
+              img(src='/thumbnails/programming-with-examples.jpg', alt='(Click to see more details about Programming with Examples.)')
+          .project.col-xs-12.col-sm-6.col-md-6
+            a.thumbnail(href='/live-tuning')
+              .caption
+                h4 Live Tuning
+              img(src='/thumbnails/live-tuning.jpg', alt='(Click to see more details about Live Tuning.)')
+      section
+        h1#projects 研究プロジェクト
+        p
+          | 2009年から現在までの研究プロジェクトを時系列に並べています。
+          i.glyphicon.glyphicon-user
+          | アイコンがついているのは共著プロジェクトです。
+          i.glyphicon.glyphicon-calendar
+          | アイコンのラベルはプロジェクトの開発期間を示しています。
+        .row
+          .project.col-xs-6.col-sm-4.col-md-3
+            a.thumbnail(href='http://f3js.org/about')
+              .caption
+                h4(rel='tooltip', title='f3.js: A Parametric Design Tool of Physical Computing Devices for Both Interaction Designers and End-users') f3.js
+                p
+                  span.label.label-default
+                    i.glyphicon.glyphicon-calendar.icon-white
+                    | '15-
+                  span.label.label-info(rel='tooltip', data-original-title='Integrated Development Environment')
+                    i.glyphicon.glyphicon-tag.icon-white
+                    | IDE
+                  span.label.label-info(rel='tooltip', data-original-title='Natural User Interface')
+                    i.glyphicon.glyphicon-tag.icon-white
+                    | NUI
+              img(src='/thumbnails/f3js.png', alt='(Click to see more details about f3js.)')
+          .project.col-xs-6.col-sm-4.col-md-3
+            a.thumbnail(href='https://staff.aist.go.jp/jun.kato/TextAlive/')
+              .caption
+                h4(rel='tooltip', title='TextAlive: 音楽に同期した歌詞アニメーションのKinetic Typography制作環境') TextAlive
+                p
+                  span.label.label-default
+                    i.glyphicon.glyphicon-calendar.icon-white
+                    | '14-
+                  span.label.label-info(rel='tooltip', data-original-title='Creativity Support')
+                    i.glyphicon.glyphicon-tag.icon-white
+                    | CS
+                  span.label.label-info(rel='tooltip', data-original-title='Integrated Development Environment')
+                    i.glyphicon.glyphicon-tag.icon-white
+                    | IDE
+                  span.label.label-info(rel='tooltip', data-original-title='Human-Music Interaction')
+                    i.glyphicon.glyphicon-tag.icon-white
+                    | Music
+              img(src='/thumbnails/textalive.png', alt='(Click to see more detail about TextAlive.)')
+          .project.col-xs-6.col-sm-4.col-md-3
+            a.thumbnail(href='https://staff.aist.go.jp/jun.kato/CrossSong/')
+              .caption
+                h4(rel='tooltip', title='CrossSong Puzzle: Generating and Unscrambling Music Mash-ups with Real-time Interactivity') CrossSong
+                p
+                  span.label.label-success(rel='tooltip', data-original-title='共著')
+                    i.glyphicon.glyphicon-user
+                  span.label.label-default
+                    i.glyphicon.glyphicon-calendar.icon-white
+                    | '15
+                  span.label.label-info(rel='tooltip', data-original-title='Human-Music Interaction')
+                    i.glyphicon.glyphicon-tag.icon-white
+                    | Music
+              img(src='/thumbnails/crosssong.png', alt='(Click to see more details about CrossSong Puzzle.)')
+          .project.col-xs-6.col-sm-4.col-md-3
+            a.thumbnail(href='/ja/sharedo/')
+              .caption
+                h4(rel='tooltip', title='Sharedo: To-do List for Sharing Tasks between Human and Agents') Sharedo
+                p
+                  span.label.label-default
+                    i.glyphicon.glyphicon-calendar.icon-white
+                    | '11-14
+                  span.label.label-info(rel='tooltip', data-original-title='Robot Application')
+                    i.glyphicon.glyphicon-tag.icon-white
+                    | Robot
+              img(src='/thumbnails/sharedo.jpg', alt='(Click to see more detail about Sharedo.)')
+          .project.col-xs-6.col-sm-4.col-md-3
+            a.thumbnail(href='/ja/visionsketch/')
+              .caption
+                h4(rel='tooltip', title='VisionSketch: Integrated Support for Example-Centric Programming of Image Processing Applications') VisionSketch
+                p
+                  span.label.label-default
+                    i.glyphicon.glyphicon-calendar.icon-white
+                    | '13-14
+                  span.label.label-info(rel='tooltip', data-original-title='Integrated Development Environment')
+                    i.glyphicon.glyphicon-tag.icon-white
+                    | IDE
+                  span.label.label-info(rel='tooltip', data-original-title='Natural User Interface')
+                    i.glyphicon.glyphicon-tag.icon-white
+                    | NUI
+              img(src='/thumbnails/visionsketch.jpg', alt='(Click to see more detail about VisionSketch.)')
+          .project.col-xs-6.col-sm-4.col-md-3
+            a.thumbnail(href='http://www-ui.is.s.u-tokyo.ac.jp/~fukahori/capstudio/capstudio.html')
+              .caption
+                h4(rel='tooltip', title='CapStudio: プログラムの実行画面の録画映像を利用した統合開発環境') CapStudio
+                p
+                  span.label.label-success(rel='tooltip', data-original-title='共著')
+                    i.glyphicon.glyphicon-user
+                  span.label.label-default
+                    i.glyphicon.glyphicon-calendar.icon-white
+                    | '12-14
+                  span.label.label-info(rel='tooltip', data-original-title='Integrated Development Environment')
+                    i.glyphicon.glyphicon-tag.icon-white
+                    | IDE
+              img(src='/thumbnails/capstudio.jpg', alt='(Click to see more detail about CapStudio.)')
+          .project.col-xs-6.col-sm-4.col-md-3
+            a.thumbnail(href='/ja/touchdevelop/')
+              .caption
+                h4(rel='tooltip', title='It's Alive! Continuous Feedback in UI Programming') It's alive! (TouchDevelop)
+                p
+                  span.label.label-default
+                    i.glyphicon.glyphicon-calendar.icon-white
+                    | '12-13
+                  span.label.label-info(rel='tooltip', data-original-title='Integrated Development Environment')
+                    i.glyphicon.glyphicon-tag.icon-white
+                    | IDE
+              img(src='/thumbnails/touchdevelop.jpg', alt='(Click to see more detail about DejaVu.)')
+          .project.col-xs-6.col-sm-4.col-md-3
+            a.thumbnail(href='/ja/picode/')
+              .caption
+                h4(rel='tooltip', title='Picode: Inline Photos Representing Posture Data in Source Code') Picode (旧名 Roboko)
+                p
+                  span.label.label-default
+                    i.glyphicon.glyphicon-calendar.icon-white
+                    | '11-13
+                  span.label.label-info(rel='tooltip', data-original-title='Integrated Development Environment')
+                    i.glyphicon.glyphicon-tag.icon-white
+                    | IDE
+                  span.label.label-info(rel='tooltip', data-original-title='Robot Application')
+                    i.glyphicon.glyphicon-tag.icon-white
+                    | Robot
+              img(src='/thumbnails/picode.jpg', alt='(Click to see more detail about Roboko.)')
+          .project.col-xs-6.col-sm-4.col-md-3
+            a.thumbnail(href='/ja/dejavu/')
+              .caption
+                h4(rel='tooltip', title='DejaVu: Integrated Support for Developing Interactive Camera-Based Programs') DejaVu
+                p
+                  span.label.label-default
+                    i.glyphicon.glyphicon-calendar.icon-white
+                    | '12
+                  span.label.label-info(rel='tooltip', data-original-title='Integrated Development Environment')
+                    i.glyphicon.glyphicon-tag.icon-white
+                    | IDE
+                  span.label.label-info(rel='tooltip', data-original-title='Natural User Interface')
+                    i.glyphicon.glyphicon-tag.icon-white
+                    | NUI
+              img(src='/thumbnails/dejavu.png', alt='(Click to see more detail about DejaVu.)')
+          .project.col-xs-6.col-sm-4.col-md-3
+            a.thumbnail(href='/ja/phybots/')
+              .caption
+                h4(rel='tooltip', title='Phybots: A Toolkit for Prototyping Robotic Things') Phybots (旧名 Matereal)
+                p
+                  span.label.label-default
+                    i.glyphicon.glyphicon-calendar.icon-white
+                    | '09-12
+                  span.label.label-info(rel='tooltip', data-original-title='Prototyping Toolkit')
+                    i.glyphicon.glyphicon-tag.icon-white
+                    | Toolkit
+                  span.label.label-info(rel='tooltip', data-original-title='Robot Application')
+                    i.glyphicon.glyphicon-tag.icon-white
+                    | Robot
+              img(src='/thumbnails/phybots.jpg', alt='(Click to see more detail about Phybots.)')
+          .project.col-xs-6.col-sm-4.col-md-3
+            a.thumbnail(href='/ja/surfboard/')
+              .caption
+                h4(rel='tooltip', title='Surfboard: Keyboard with Microphone as a Low-cost Interactive Surface') Surfboard
+                p
+                  span.label.label-default
+                    i.glyphicon.glyphicon-calendar.icon-white
+                    | '10
+                  span.label.label-info(rel='tooltip', data-original-title='Natural User Interface')
+                    i.glyphicon.glyphicon-tag.icon-white
+                    | NUI
+              img(src='/thumbnails/surfboard.jpg', alt='(Click to see more detail about Surfboard.)')
+          .project.col-xs-6.col-sm-4.col-md-3
+            a.thumbnail(href='/ja/pressing/')
+              .caption
+                h4(rel='tooltip', title='Pressing: A Pressure-sensitive Interpreter with Visual Feedbacks') Pressing
+                p
+                  span.label.label-default
+                    i.glyphicon.glyphicon-calendar.icon-white
+                    | '09
+                  span.label.label-info(rel='tooltip', data-original-title='Integrated Development Environment')
+                    i.glyphicon.glyphicon-tag.icon-white
+                    | IDE
+                  span.label.label-info(rel='tooltip', data-original-title='Natural User Interface')
+                    i.glyphicon.glyphicon-tag.icon-white
+                    | NUI
+              img(src='/thumbnails/pressing.jpg', alt='(Click to see more detail about Pressing.)')
+          .project.col-xs-6.col-sm-4.col-md-3
+            a.thumbnail(href='http://www.jst.go.jp/erato/igarashi/projects/CRISTAL/')
+              .caption
+                h4(rel='tooltip', title='CRISTAL: Control of Remotely Interfaced Systems Using Touch-Based Actions in Living Spaces') CRISTAL
+                p
+                  span.label.label-success(rel='tooltip', data-original-title='共著')
+                    i.glyphicon.glyphicon-user
+                  span.label.label-default
+                    i.glyphicon.glyphicon-calendar.icon-white
+                    | '09
+                  span.label.label-info(rel='tooltip', data-original-title='Robot Application')
+                    i.glyphicon.glyphicon-tag.icon-white
+                    | Robot
+                  span.label.label-info(rel='tooltip', data-original-title='Natural User Interface')
+                    i.glyphicon.glyphicon-tag.icon-white
+                    | NUI
+              img(src='/thumbnails/cristal.jpg', alt='(Click to see more detail about CRISTAL.)')
+          .project.col-xs-6.col-sm-4.col-md-3
+            a.thumbnail(href='/ja/multirobot/')
+              .caption
+                h4(rel='tooltip', title='Multi-touch Interface for Controlling Multiple Mobile Robots') Multi-touch Multi-robot
+                p
+                  span.label.label-default
+                    i.glyphicon.glyphicon-calendar.icon-white
+                    | '08-09
+                  span.label.label-info(rel='tooltip', data-original-title='Robot Application')
+                    i.glyphicon.glyphicon-tag.icon-white
+                    | Robot
+                  span.label.label-info(rel='tooltip', data-original-title='Natural User Interface')
+                    i.glyphicon.glyphicon-tag.icon-white
+                    | NUI
+              img(src='/thumbnails/multirobot.jpg', alt='(Click to see more detail about Multi-touch Interface for Controlling Multiple Mobile Robots.)')
+      //        
+          <h2 id="collaborations">共同プロジェクト</h2>
+          <div class="row">
+            <div class="col-md-3">
+              <p>2009年から現在までの共同研究のプロジェクトを時系列に並べています。</p>
+            </div>
+            <div class="col-md-9">
+              <ul class="thumbnails">
+        
+              </ul>
+            </div>
+          </div>
+        </section>
+        
+      section
+        h1#side-projects サイドプロジェクト
+        p
+          | 個人的な趣味で進めているプロジェクトを時系列に並べています。
+          i.glyphicon.glyphicon-calendar
+          | アイコンがついているのはプロジェクトの遂行期間です。
+        .row
+          //            
+            			  <ul>
+            			    <li>科学技術コミュニケーション</li>
+            			    <li>インタラクション考証協力</li>
+            			    <li><a href="homehack">家電ハック</a></li>
+            			  </ul>
+            			  
+          .project.col-xs-6.col-sm-4.col-md-3
+            a.thumbnail(href='/ja/teaparty/')
+              .caption
+                h4(rel='tooltip') 名状しがたいお茶会
+                p
+                  span.label.label-default
+                    i.glyphicon.glyphicon-calendar.icon-white
+                    | '12-16
+              img(src='/thumbnails/teaparty.jpg', alt='(Click to see more detail about this event.)')
+          .project.col-xs-6.col-sm-4.col-md-3
+            a.thumbnail(href='/ja/openpool/')
+              .caption
+                h4(rel='tooltip', title='OpenPool: Open-source Billiard Table as an Interactive Surface') OpenPool
+                p
+                  span.label.label-default
+                    i.glyphicon.glyphicon-calendar.icon-white
+                    | '12-13
+                  span.label.label-info(rel='tooltip')
+                    i.glyphicon.glyphicon-tag.icon-white
+                    | Toolkit
+                  span.label.label-info(rel='tooltip', data-original-title='Natural User Interface')
+                    i.glyphicon.glyphicon-tag.icon-white
+                    | NUI
+              img(src='/thumbnails/openpool.jpg', alt='(Click to see more detail about OpenPool.)')
+          .project.col-xs-6.col-sm-4.col-md-3
+            a.thumbnail(href='/ja/homehack/')
+              .caption
+                h4(rel='tooltip', title='Home hacking') 家ハック
+                p
+                  span.label.label-default
+                    i.glyphicon.glyphicon-calendar.icon-white
+                    | '11-
+                  span.label.label-info(rel='tooltip', data-original-title='Natural User Interface')
+                    i.glyphicon.glyphicon-tag.icon-white
+                    | NUI
+              img(src='/thumbnails/homehack.jpg', alt='(Click to see more detail about home hacking.)')
+          .project.col-xs-6.col-sm-4.col-md-3
+            a.thumbnail(href='http://digitalmuseum.jp/software/rtunes/')
+              .caption
+                h4(rel='tooltip', title='RemotiTunes: Listen to Your Home iTunes Library from Anywhere') RemotiTunes
+                p
+                  span.label.label-default
+                    i.glyphicon.glyphicon-calendar.icon-white
+                    | '11
+              img(src='/thumbnails/remotitunes.jpg')
+          .project.col-xs-6.col-sm-4.col-md-3
+            a.thumbnail(href='/ja/intelliviewer/')
+              .caption
+                h4(rel='tooltip', title='IntelliViewer: Hierarchical Source Code Viewer on Adaptive Keyboard') IntelliViewer
+                p
+                  span.label.label-default
+                    i.glyphicon.glyphicon-calendar.icon-white
+                    | '10
+                  span.label.label-info(rel='tooltip', data-original-title='Integrated Development Environment')
+                    i.glyphicon.glyphicon-tag.icon-white
+                    | IDE
+                  span.label.label-info(rel='tooltip', data-original-title='Natural User Interface')
+                    i.glyphicon.glyphicon-tag.icon-white
+                    | NUI
+              img(src='/thumbnails/intelliviewer.jpg', alt='(Click to see more detail about IntelliViewer.)')
+          .project.col-xs-6.col-sm-4.col-md-3
+            a.thumbnail(href='http://digitalmuseum.jp/software/chippie/')
+              .caption
+                h4(rel='tooltip', title='Chippie: CMS as Hybrid-system with Pluggable Pieces') Chippie
+                p
+                  span.label.label-default
+                    i.glyphicon.glyphicon-calendar.icon-white
+                    | '06-08
+                  span.label.label-info(rel='tooltip')
+                    i.glyphicon.glyphicon-tag.icon-white
+                    | Toolkit
+              img(src='/thumbnails/chippie.png')
+          .project.col-xs-6.col-sm-4.col-md-3
+            a.thumbnail(href='http://digitalmuseum.jp/software/arxmp/')
+              .caption
+                h4 arX MusicPlayer
+                p
+                  span.label.label-default
+                    i.glyphicon.glyphicon-calendar.icon-white
+                    | '02-07
+              img(src='/thumbnails/arxmusicplayer.jpg')
+          .project.col-xs-6.col-sm-4.col-md-3
+            a.thumbnail(href='http://digitalmuseum.jp/software/arxlc/')
+              .caption
+                h4 arX Launcher
+                p
+                  span.label.label-default
+                    i.glyphicon.glyphicon-calendar.icon-white
+                    | '04
+              img(src='/thumbnails/arxlauncher.png')
+      section
+        h1#contact 連絡先
+        .row
+          .col-md-6
+            address
+              strong
+                a(href='https://www.aist.go.jp/') 産業技術総合研究所
+                a(href='https://www.itri.aist.go.jp/')
+                  abbr(title='情報技術研究部門 (Information Technology Research Institute)') ITRI
+                a(href='https://staff.aist.go.jp/m.goto/MIG/index-j.html') メディアインタラクション研究グループ
+              br
+              | 〒305-8568 茨城県つくば市梅園1-1-1 中央第2
+              br
+              abbr(title='Phone') P:
+              | 029-862-6622 (直通)
+              br
+              abbr(title='Fax') F:
+              | 029-861-3313
+              //                
+                        <del><strong><a href="http://www-ui.is.s.u-tokyo.ac.jp/">五十嵐研究室（User Interface Research Laboratory）</a></strong><br/>
+                        〒113-0033 東京都文京区本郷7-3-1 東京大学理学部7号館3階302号室</del>
+                        <abbr title="Phone">P:</abbr> <del>03-5841-4091</del><br/>
+                        <abbr title="Fax">F:</abbr> <del>03-5841-4105</del>
+                
+          .col-md-6
+            address
+              strong 加藤 淳
+              br
+              a(href='mailto:i@junkato.jp')
+                i.glyphicon.glyphicon-envelope
+                | i@junkato.jp
+              a(href='https://facebook.com/jun.kato')
+                i.glyphicon.glyphicon-user
+                | facebook.com/jun.kato
+              a(href='https://jp.linkedin.com/in/jkato')
+                i.glyphicon.glyphicon-user
+                | jp.linkedin.com/in/jkato
+              br
+              a.twitter-follow-button(href='https://twitter.com/junkato', data-show-count='false', data-lang='en') twitter.com/junkato
+              script var f=function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}};!f(document,"script","twitter-wjs1");
+              a.twitter-follow-button(href='https://twitter.com/arcatdmz', data-show-count='false', data-lang='ja') twitter.com/arcatdmz
+              script !f(document,"script","twitter-wjs2");
+        p.alert.alert-info
+          a(href='/ja/collaborations')
+            i.glyphicon.glyphicon-info-sign
+            b 一緒に研究しませんか？
+          | 共同研究やインターンの相談については
+          a(href='/ja/collaborations') 別ページに詳しく書いてあります
+          | 。
+      footer
+        hr
+        p
+          | ©
+          a(href='mailto:i@junkato.jp') 加藤 淳
+          | 2012-2017 |
+          a(href='/')
+            | English
+            i.translation.glyphicon.glyphicon-text-background
+      // Scripts 
+      script(src='//code.jquery.com/jquery-1.11.3.min.js')
+      script(src='/js/bootstrap.min.js')
+      script(type='text/javascript') (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2538649-10', 'auto');
+  ga('send', 'pageview');
+
+  $(function(){
+    var a = $('a.bibtex'), lastTooltip = null;
+    a.tooltip({ trigger: "manual", html: true, template: '<div class="tooltip bibtex"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>' });
+    a.click(function(e){ e.preventDefault(); if (lastTooltip !== this) $(lastTooltip).tooltip('hide'); lastTooltip = this; $(lastTooltip).tooltip('toggle'); return false; });
+  });
+      script $(function(){
+  var links = $('#vision a');
+  links.click(function() { return false; });
+  links.tooltip();
+
+  $('#profile img').tooltip();
+  $('.project .caption span.label').tooltip();
+  $('.project .caption h4').tooltip();
+  $.get(location.protocol + '//' + location.hostname + '/ja/blog/feed', function (xml) {
+    var $items = $(xml).find('item')
+      , $feedRoot = $('#blogfeed')
+      , ul = document.createElement('ul');
+    for (var i = 0;i < $items.length; i ++) {
+      var $item = $($items[i])
+        , url = $item.find('link').text()
+        , title = $item.find('title').text()
+        , pubDate = new Date($item.find('pubDate').text())
+        , li = document.createElement('li')
+        , a = document.createElement('a');
+      a.setAttribute('href', url);
+      a.appendChild(document.createTextNode(title));
+      li.appendChild(a);
+      li.appendChild(document.createTextNode(' ('
+      	+ (pubDate.getYear() + 1900) + '年'
+      	+ (pubDate.getMonth() + 1) + '月'
+      	+ pubDate.getDate() + '日)'));
+      ul.appendChild(li);
+    }
+    $feedRoot.append(ul);
+  });
+});
+    // /container 

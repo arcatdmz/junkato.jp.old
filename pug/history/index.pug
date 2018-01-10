@@ -1,0 +1,475 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width,initial-scale=1')
+    meta(name='description', content='')
+    meta(name='author', content='Jun Kato')
+    meta(property='fb:admins', content='503220390')
+    link(rev='made', href='mailto:i@junkato.jp')
+    title News | junkato.jp
+    // Styles 
+    link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Droid+Sans')
+    link(href='/css/bootstrap.min.css', rel='stylesheet')
+    link(href='/css/main.css', rel='stylesheet')
+    // Le HTML5 shim, for IE6-8 support of HTML5 elements 
+    //      [if lt IE 9]>
+            <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+          <![endif]
+  body
+    .navbar.navbar-default.navbar-fixed-top(data-dropdown='dropdown', role='navigation')
+      .container
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navigation')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='/') Jun Kato
+        #navigation.collapse.navbar-collapse
+          ul.nav.navbar-nav
+            li
+              a(href='/#about') Profile
+            li
+              a(href='/#projects') Projects
+            li
+              a(href='/publications/') Awards & Publications
+            li
+              a(href='/fun/') Fun
+            li
+              a(href='/#contact') Contact
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href='/ja/history/')
+                | 日本語
+                i.translation.icon-ja
+    // container 
+    .container
+      section
+        h1 News
+        p News are listed in reverse chronological order.
+        table.table.table-striped.table-condensed
+          tbody#recent_histories
+            tr
+              td.nowrap 11/08/2017
+              td
+                | Provided a keynote talk at
+                a(href='https://2017.splashcon.org/', title='The ACM SIGPLAN conference on Systems, Programming, Languages and Applications: Software for Humanity') SPLASH
+                a(href='https://2017.splashcon.org/track/live-2017#program') LIVE 2017
+                | . I'm writing a follow-up article about the talk, but for now, please refer to
+                a(href='https://2017.splashcon.org/event/live-2017-keynote-a') the talk abstract
+                | and
+                a(href='https://junkato.jp/publications/live2017-kato-keynote-slides.pdf') slide deck
+                | .
+            tr
+              td.nowrap 09/23/2017
+              td
+                | Will serve as a keynote speaker at
+                a(href='https://2017.splashcon.org/', title='The ACM SIGPLAN conference on Systems, Programming, Languages and Applications: Software for Humanity') SPLASH
+                a(href='https://2017.splashcon.org/track/live-2017#program') LIVE 2017
+                | . See you in Vancouver!
+            tr
+              td.nowrap 06/29/2017
+              td
+                | Visited Pittsburgh for
+                a(href='http://uist.acm.org/uist2017') ACM UIST 2017
+                abbr(title='Program Committee') PC
+                | meeting, gave a talk at
+                a(href='https://www.scs.cmu.edu/calendar/mon-2017-06-26-1230/special-human-computer-interaction-talk')
+                  | CMU
+                  abbr(title='Human-Computer Interaction Institute') HCII
+                | , dropped by Seattle and visited
+                a(href='https://dub.washington.edu') UW
+                | and
+                a(href='https://www.microsoft.com/en-us/research/group/research-in-software-engineering-rise/') Microsoft Research
+                | .
+            tr
+              td.nowrap 06/14/2017
+              td
+                | Presented
+                a(href='http://f3js.org') f3.js
+                | at
+                a(href='http://www.dis2017.org/') ACM DIS 2017
+                | . Slides are available for download in
+                a(href='/publications') the publications
+                | page.
+            tr
+              td.nowrap 04/04/2017
+              td
+                | Presented
+                a(href='/ugv') User-Generated Variables
+                | at <Programming>
+                a(href='http://programming-experience.org/px17/')
+                  abbr(title='Programming Experience') PX
+                  | workshop
+                | . It's always good to get to know new people!
+            tr
+              td.nowrap 03/27/2017
+              td
+                | Publicly demonstrated
+                a(href='http://logs.f3js.org') Robocam (f3js-logs)
+                | for the first time at
+                a(href='humanrobotinteraction.org/2017/') ACM/IEEE HRI 2017
+                | , which is an accompanying tool and web-based interface to f3.js that helps recording event logs of IoT applications and authoring their demo videos.
+            tr
+              td.nowrap 12/18/2016
+              td
+                | Attended
+                a(href='http://sigchi.jp/symposium.html') The First ACM SIGCHI Asian Symposium
+                | and was named as a board member for
+                a(href='http://sigchi.jp/') Japan ACM SIGCHI Chapter
+                | .
+            tr
+              td.nowrap 10/19/2016
+              td
+                | Served as a Student Volunteer Chair for
+                a(href='http://www.acm.org/uist/uist2016/') ACM UIST 2016
+                | . Thanks all for coming to Tokyo!
+            tr
+              td.nowrap 08/07/2016
+              td
+                | Organized
+                a(href='http://sigpx.org/en/2')
+                  | The Second Workshop of
+                  abbr(title='Special Interest Group on Programming Experience') SIGPX
+                | .
+            tr
+              td.nowrap 07/16/2016
+              td
+                | Created a web page for the new
+                a(href='http://2016.ecoop.org/track/LIVE-2016') ECOOP 2016 LIVE
+                | workshop paper that introduces
+                a(href='/live-tuning', title='Live Tuning: Expanding Live Programming Benefits to End-users') "Live Tuning"
+                | .
+            tr
+              td.nowrap 07/15/2016
+              td
+                | Created a web page for the new IEEE Computer journal article that introduces
+                a(href='/programming-with-examples', title='Programming with Examples to Develop Data-intensive User Interfaces') "Programming with Examples"
+                | .
+            tr
+              td.nowrap 05/23/2016
+              td
+                | Visited
+                a(href='http://vpri.org/')
+                  abbr(title='Viewpoints Research Institute') VPRI
+                | ,
+                a(href='https://blog.ycombinator.com/harc')
+                  | Y Combinator Research
+                  abbr(title='Human Advancement Research Community') HARC
+                | , and several other places around Bay Area. Organized
+                a(href='http://hci.tokyo/') Japanese HCI Symposium
+                | at
+                a(href='https://chi2016.acm.org/wp/workshops/') ACM CHI 2016
+                | .
+            tr
+              td.nowrap 02/27/2016
+              td
+                | Organized
+                a(href='http://sigpx.org/en/1')
+                  | The First Workshop of
+                  abbr(title='Special Interest Group on Programming Experience') SIGPX
+                | . English translation of the press release that introduces the
+                a(href='http://textalive.jp/') TextAlive
+                | web service is
+                a(href='http://www.aist.go.jp/aist_e/latest_research/2016/20160125/en20160125.html') now available
+                | .
+            tr
+              td.nowrap 12/18/2015
+              td
+                | Received the Best Paper Award at
+                a(href='http://www.maynoothuniversity.ie/smc15/') SMC 2015
+                | for co-authoring a paper about an interactive music puzzle named
+                a(href='https://staff.aist.go.jp/jun.kato/CrossSong/') CrossSong
+                | - please enjoy :)
+            tr
+              td.nowrap 11/20/2015
+              td
+                | Publicly demonstrated
+                a(href='http://f3js.org') f3.js
+                | for the first time at
+                a(href='http://uist.acm.org/uist2015/about') ACM UIST 2015
+                | , which is an
+                abbr(title='Integrated Development Environment') IDE
+                | to create IoT applications purely by code.
+            tr
+              td.nowrap 09/23/2015
+              td
+                | My Ph.D dissertation finally got online on the university's repository.
+                a(href='http://hdl.handle.net/2261/58372?locale=en')
+                  u Jun Kato
+                  | ,
+                  b "Integrated Graphical Representations for Development of Programs with Real-world Input and Output"
+                  | , Mar. 2014
+                | .
+            tr
+              td.nowrap 07/29/2015
+              td
+                | Presented
+                a(href='http://textalive.jp/paper')
+                  | TextAlive Online (ver.β
+                  small js
+                  | )
+                | at
+                a(href='http://iclc.livecodenetwork.org/', title='The First International Conference on Live Coding') ICLC 2015
+                | and visited friends around UK!
+            tr
+              td.nowrap 05/14/2015
+              td
+                | Presented
+                a(href='/textalive/') TextAlive
+                | in the "Programming Environments" session and organized
+                a(href='http://hci.tokyo/') Japanese HCI Symposium
+                | at
+                a(href='http://chi2015.acm.org/program/full-schedule/?id=pn160') ACM CHI 2015
+                | .
+                // In July, I will attend <a href="http://iclc.livecodenetwork.org/" title="The First International Conference on Live Coding">ICLC 2015</a>, Leeds, UK. 
+            tr
+              td.nowrap 04/11/2015
+              td
+                | In preparation for the CHI presentation,
+                a(href='http://textalive.jp/') TextAlive
+                | is finally released as ver.β
+                small js
+                | ! Make videos within your browser.
+            tr
+              td.nowrap 03/20/2015
+              td
+                | Served as an organizing committee member for a special event named
+                a(href='https://www.facebook.com/jun.kato/posts/10155228208505391') IPSJ-ONE
+                | . It gathered 19 top-notch researchers in Information Processing (computer science, information science, that sort of thing) from all over Japan, each of them giving 5-minutes talk introducing their work with their passion for research.
+            tr
+              td.nowrap 03/02/2015
+              td
+                | My paper about
+                a(href='/textalive/') TextAlive
+                | , an
+                abbr(title='Integrated Design Environment') IDE
+                | to create Kinetic Typography videos with live programming, is accepted to
+                a(href='http://chi2015.acm.org/program/full-schedule/?id=pn160') ACM CHI 2015
+                | . It wins
+                abbr(title='Best of CHI Honorable Mention award') a silver medal
+                | ! See you in Korea :)
+            tr
+              td.nowrap 12/06/2014
+              td
+                | Will hold
+                a(href='http://hci.tokyo/') a symposium on Emerging Japanese HCI Research Collection
+                | at
+                a(href='http://chi2015.acm.org/') ACM CHI 2015
+                | .
+            tr
+              td.nowrap 11/01/2014
+              td
+                | Chaired "Novel Interaction Techniques" session and presented
+                a(href='/sharedo/') Sharedo
+                | which was nominated for the best paper at
+                a(href='http://hai-conference.net/hai2014/') HAI 2014
+                | .
+            tr
+              td.nowrap 08/09/2014
+              td
+                | My paper about
+                a(href='/sharedo/') Sharedo
+                | that discusses sharing tasks between human and agents is accepted to
+                a(href='http://hai-conference.net/hai2014/') HAI 2014
+                | . See you in Japan this October!
+            tr
+              td.nowrap 06/19/2014
+              td
+                | Visited
+                a(href='http://www.dgp.toronto.edu/')
+                  | the University of Toronto
+                  abbr(title='Dynamic Graphics Project') DGP
+                | and gave a talk. I'm also visiting
+                a(href='http://hci.cs.umanitoba.ca/')
+                  | the University of Manitoba
+                  abbr(title='Human-Computer Interaction') HCI
+                  | Lab
+                | in a few days and will give another talk. Both of these talks are about "Live Programming" in the real world, which is based on my Ph.D dissertation and discusses the direction of future work in my current position.
+            tr
+              td.nowrap 04/25/2014
+              td
+                | Serving as a program committee member for
+                a(href='http://www.acm.org/uist/uist2014/organizers.php') ACM UIST 2014
+                | is exciting but difficult. Apart from it, I'm getting settled in the new environment and have just started to prepare for attending
+                a(href='http://www.cs.mcgill.ca/~kry/gi2014/') Graphics Interface 2014
+                | . I'm going to present
+                a(href='/visionsketch/') VisionSketch
+                | in the "
+                a(href='http://www.cs.mcgill.ca/~kry/gi2014/program.html#S5') Video and Collaboration
+                | " session on 5/8.
+            tr
+              td.nowrap 04/01/2014
+              td
+                | Received a Ph.D degree in Computer Science and started to work as a researcher in
+                a(href='http://www.aist.go.jp/aist_e/about_aist/') AIST
+                | , a research organization funded by the Japanese government in which over 2000 researchers work hard to contribute to both industry and science. My primary task won't change - to conduct interesting research, write good paper, and do some other stuff to make world better place with help of information technology :)
+            tr
+              td.nowrap 02/25/2014
+              td Upgraded Bootstrap framework from v2 to v3 for better browsing experience. What a modern flat design!
+            tr
+              td.nowrap 02/20/2014
+              td
+                | Defended my dissertation! Details will come later. My paper about
+                a(href='/visionsketch/') VisionSketch
+                | is accepted to
+                a(href='http://www.cs.mcgill.ca/~kry/gi2014/') Graphics Interface 2014
+                | .
+            tr
+              td.nowrap 11/19/2013
+              td
+                | Visited St. Andrews to for
+                a(href='http://www.acm.org/uist/uist2013/') ACM UIST 2013
+                | , gave a talk at
+                a(href='http://vimeo.com/77669396')
+                  | University of Washington
+                  abbr(title='Design Use Build') dub
+                | , met friends of the Microsoft campus, and finished the Adobe internship... I'm back in Japan!
+            tr
+              td.nowrap 08/12/2013
+              td
+                | Started internship at
+                a(href='http://www.adobe.com/technology/') Adobe Creative Technologies Lab
+                | in Seattle.
+            tr
+              td.nowrap 08/04/2013
+              td
+                | I am going to attend
+                a(href='http://www.acm.org/uist/uist2013/') ACM UIST 2013
+                | ... expecting fruitful discussion at Doctoral Symposium. My paper describing the development process of
+                a(href='/openpool/') OpenPool
+                | is accepted to present at
+                a(href='http://www.ieee-gcce.org/2013/') IEEE GCCE 2013
+                | .
+            tr
+              td.nowrap 06/24/2013
+              td
+                | Got some sort of recognition at ACM conferences,
+                a(href='http://chi2013.acm.org/') ACM CHI
+                | and
+                a(href='http://pldi2013.ucombinator.org/') ACM PLDI
+                | , detailed in
+                a(href='/publications/#awards') Awards
+                | section. Will work for
+                a(href='http://www.adobe.com/technology/people-by-location.html#seattle') Adobe Research Seattle
+                | this summer.
+            tr
+              td.nowrap 04/16/2013
+              td
+                | My sole-authored poster about
+                a(href='/visionsketch/') VisionSketch
+                | is accepted to present at Student Research Competition of
+                a(href='http://pldi2013.ucombinator.org/') ACM PLDI 2013
+                | .
+            tr
+              td.nowrap 03/05/2013
+              td
+                | My colleagues are going to present
+                a(href='/openpool/') OpenPool
+                | at
+                a(href='http://sxsw.com/trade-shows/exhibitors?client_id=S13-6173', title='South by Southwest 2013') SXSW 2013
+                | . I've worked on the project as one of the main programmers. Stay tuned for its open-source distribution!
+            tr
+              td.nowrap 03/02/2013
+              td
+                | Collaboration with
+                abbr(title='Programming Language') PL
+                | people turned out to be a full paper at
+                a(href='http://pldi2013.ucombinator.org/') ACM PLDI 2013
+                | . It's about live programming on
+                a(href='https://www.touchdevelop.com/app/') TouchDevelop Web App
+                | !
+            tr
+              td.nowrap 12/13/2012
+              td
+                | My short paper about
+                a(href='/picode/') Picode
+                | is conditionally accepted to
+                a(href='http://chi2013.acm.org/') ACM CHI 2013
+                | . See you in Paris!
+            tr
+              td.nowrap 10/28/2012
+              td
+                | Attended
+                a(href='http://www.msra.cn/21CCC/xsjs_en.html', title='Computing in the 21st Century Conference') 21 CCC
+                | in Tianjin, China and received this year's
+                a(href='http://blogs.technet.com/b/inside_microsoft_research/archive/2012/10/26/14-years-of-inspiring-asia-pacific-ph-d-candidates.aspx') Microsoft Research Asia Fellowship
+                | .
+            tr
+              td.nowrap 10/15/2012
+              td
+                | Finished my talk at
+                a(href='http://www.acm.org/uist/uist2012/') ACM UIST 2012
+                | in the "
+                a(href='http://www.acm.org/uist/uist2012/program.html#Paper_211') Toolkits
+                | " session on 10/9. Will serve as a Publicity Co-chair at
+                a(href='http://www.acm.org/uist/uist2013/') ACM UIST 2013
+                | !
+            tr
+              td.nowrap 09/18/2012
+              td Back in Japan again. The future plan includes a visit to Beijing in this month and Boston and New York in October.
+            tr
+              td.nowrap 07/21/2012
+              td
+                | My paper about an IDE named DejaVu is accepted to
+                a(href='http://www.acm.org/uist/uist2012/') ACM UIST 2012
+                | . The details will come later.
+            tr
+              td.nowrap 06/21/2012
+              td
+                | Started to work with
+                a(href='http://research.microsoft.com/en-us/projects/touchdevelop/') TouchDevelop
+                | team as a research intern in
+                a(href='http://research.microsoft.com/en-us/groups/rise/')
+                  abbr(title='Research in Software Engineering') RiSE
+                  | Group
+                | , Microsoft Research Redmond.
+            tr
+              td.nowrap 05/05/2012
+              td Back in Japan... In June, I will start an internship in Redmond.
+            tr
+              td.nowrap 03/23/2012
+              td
+                | My paper about
+                a(href='/phybots/') Phybots
+                | is accepted to
+                a(href='http://www.dis2012.org/') ACM DIS 2012
+                | . I will present the paper in the "
+                a(href='http://www.dis2012.org/program.php#session10') Absolutely Fab
+                | " session on 6/13.
+            tr
+              td.nowrap 03/19/2012
+              td Renewed the website.
+            tr
+              td.nowrap 01/09/2012
+              td
+                | Started an internship at
+                a(href='http://research.microsoft.com/hci') HCI Group
+                | of Microsoft Research Asia.
+      footer
+        hr
+        p
+          | ©
+          a(href='mailto:i@junkato.jp') Jun Kato
+          | 2012-2017 |
+          a(href='/ja/history/')
+            | 日本語
+            i.translation.icon-ja
+      // Scripts 
+      script(src='//code.jquery.com/jquery-1.11.3.min.js')
+      script(src='/js/bootstrap.min.js')
+      script(type='text/javascript') (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2538649-10', 'auto');
+  ga('send', 'pageview');
+
+  $(function(){
+    var a = $('a.bibtex'), lastTooltip = null;
+    a.tooltip({ trigger: "manual", html: true, template: '<div class="tooltip bibtex"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>' });
+    a.click(function(e){ e.preventDefault(); if (lastTooltip !== this) $(lastTooltip).tooltip('hide'); lastTooltip = this; $(lastTooltip).tooltip('toggle'); return false; });
+  });
+    // /container 

@@ -1,0 +1,568 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width,initial-scale=1')
+    meta(name='description', content='')
+    meta(name='author', content='Jun Kato')
+    meta(property='fb:admins', content='503220390')
+    link(rev='made', href='mailto:i@junkato.jp')
+    title Portfolio of Jun Kato | junkato.jp
+    // Styles 
+    link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Droid+Sans')
+    link(href='/css/bootstrap.min.css', rel='stylesheet')
+    link(href='/css/main.css', rel='stylesheet')
+    // Le HTML5 shim, for IE6-8 support of HTML5 elements 
+    //      [if lt IE 9]>
+            <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+          <![endif]
+  body(data-spy='scroll', data-target='#navigation', data-offset='70')
+    .navbar.navbar-default.navbar-fixed-top(data-dropdown='dropdown', role='navigation')
+      .container
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navigation')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='') Jun Kato
+        #navigation.collapse.navbar-collapse
+          ul.nav.navbar-nav
+            li
+              a(href='#about') Profile
+            li
+              a(href='#projects') Projects
+            li
+              a(href='publications/') Awards & Publications
+            li
+              a(href='fun/') Fun
+            li
+              a(href='#contact') Contact
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href='/ja/')
+                | 日本語
+                i.translation.icon-ja
+    // container 
+    .container
+      section
+        .row#firstsection
+          #profile.hidden-xs.hidden-sm.col-xs-6.col-sm-4.col-md-3
+            .thumbnail
+              img(src='/junkato.jpg', alt='Photo of Jun Kato', rel='tooltip', title='Hi! How are you?', width='260')
+          .col-sm-12.col-md-9
+            h1#about Jun Kato
+            p#vision
+              | I am interested in broad area of
+              b Human-Computer Interaction
+              | , but have been especially focused on
+              a(href='#', rel='tooltip', title='Physical Computing, Robot Application') interactions
+              | between human and the real world through computers, their
+              a(href='#', rel='tooltip', title='Natural User Interface') input modalities
+              | , and their
+              a(href='#', rel='tooltip', title='Prototyping Toolkit, Integrated Development Environment, Programming Language') development methods
+              | . My current focus is on
+              b designing tools for programming interactive media content
+              | .
+            //              
+                    <p>In my future vision, everyone can be a weekend carpenter who makes his/her everyday life easy and comfortable with help of information technology, i.e., <b>end-user programming { of | in } the real world</b>.</p>
+              
+            p
+              | In my future vision, people with the diverse background can collaborate with others and express their creativity within an
+              strong integrated design environment
+              | - a set of { physical | graphical | textual } user interfaces that provide creativity support for not only conventional programming but also data collection, management, and manipulation.
+            ul
+              li
+                | Researcher,
+                a(href='https://staff.aist.go.jp/m.goto/MIG/') Media Interaction Group
+                | ,
+                a(href='https://www.itri.aist.go.jp/en/') Information Technology Research Institute (ITRI)
+                | ,
+                a(href='https://www.aist.go.jp/index_en.html') National Institute of Advanced Industrial Science and Technology (AIST)
+              li
+                | Ph.D in Computer Science received in March 2014 from
+                a(href='http://www.is.s.u-tokyo.ac.jp/english/') Department of Computer Science
+                | ,
+                a(href='http://www.i.u-tokyo.ac.jp/index_e.shtml') Graduate School of Information Science and Technology
+                | ,
+                a(href='http://www.u-tokyo.ac.jp/index_e.html') The University of Tokyo
+                | under supervision of
+                a(href='http://www-ui.is.s.u-tokyo.ac.jp/~takeo/') Prof. Takeo Igarashi
+              //                
+                        <li><a href="http://designinterface.jp/en/">JST ERATO Igarashi Design Interface Project</a> Research Assistant</li>
+                        <li><a href="http://www.jsps.go.jp/english/e-pd/pddc.htm">JSPS</a> Research Fellow (DC1)</a></li>
+                
+              li
+                a(href='/resume.html')
+                  i.glyphicon.glyphicon-file
+                  | My resume
+                | is available for download.
+              li.visible-xs.visible-sm
+                a(href='/junkato.jpg')
+                  i.glyphicon.glyphicon-camera
+                  | My photo
+                | taken by my good friend at
+                a(href='http://research.microsoft.com/hci') Microsoft Research Asia
+                | is also available.
+        hr
+        h2#recent Recent updates
+        table.table.table-striped.table-condensed
+          tbody#recent_histories
+            tr
+              td.nowrap 11/08/2017
+              td
+                | Provided a keynote talk at
+                a(href='https://2017.splashcon.org/', title='The ACM SIGPLAN conference on Systems, Programming, Languages and Applications: Software for Humanity') SPLASH
+                a(href='https://2017.splashcon.org/track/live-2017#program') LIVE 2017
+                | . I'm writing a follow-up article about the talk, but for now, please refer to
+                a(href='https://2017.splashcon.org/event/live-2017-keynote-a') the talk abstract
+                | and
+                a(href='https://junkato.jp/publications/live2017-kato-keynote-slides.pdf') slide deck
+                | .
+            tr
+              td.nowrap 09/23/2017
+              td
+                | Will serve as a keynote speaker at
+                a(href='https://2017.splashcon.org/', title='The ACM SIGPLAN conference on Systems, Programming, Languages and Applications: Software for Humanity') SPLASH
+                a(href='https://2017.splashcon.org/track/live-2017#program') LIVE 2017
+                | . See you in Vancouver!
+            tr
+              td.nowrap 06/29/2017
+              td
+                | Visited Pittsburgh for
+                a(href='http://uist.acm.org/uist2017') ACM UIST 2017
+                abbr(title='Program Committee') PC
+                | meeting, gave a talk at
+                a(href='https://www.scs.cmu.edu/calendar/mon-2017-06-26-1230/special-human-computer-interaction-talk')
+                  | CMU
+                  abbr(title='Human-Computer Interaction Institute') HCII
+                | , dropped by Seattle and visited
+                a(href='https://dub.washington.edu') UW
+                | and
+                a(href='https://www.microsoft.com/en-us/research/group/research-in-software-engineering-rise/') Microsoft Research
+                | .
+            tr#recent_histories_more
+              td.nowrap(colspan='2', style='text-align:right;padding-right:0;')
+                a.recent_histories_nav.btn.btn-primary(href='#', onclick='var n=3;var row=$('#recent_histories_more');var f=function(o){$.getJSON('./history/?offset='+o+'&numbers='+n,function(data){$.each(data['histories'],function(key,val){if(val['content']=='')return;row.before('<tr><td>'+val['date']+'</td><td>'+val['content']+'</td></tr>')});console.log(data);if(data['last']){row.remove()}else{var a=$('#recent_histories_more a.recent_histories_nav');a.removeAttr('onclick');a.unbind();var o_=o+n;a.click(function(){f(o_);return false});}})};f(n);return false')
+                  | More
+                  i.glyphicon.glyphicon-zoom-in
+                a.btn.btn-default(href='/history/')
+                  | All
+                  i.glyphicon.glyphicon-fullscreen
+      section
+        h1#concepts Concepts
+        p
+          | There are some concepts I have proposed and realized through
+          a(href='#projects') my research projects
+          | .
+        .row
+          .project.col-xs-12.col-sm-6.col-md-6
+            a.thumbnail(href='/programming-with-examples')
+              .caption
+                h4 Programming with Examples
+              img(src='/thumbnails/programming-with-examples.jpg', alt='(Click to see more details about Programming with Examples.)')
+          .project.col-xs-12.col-sm-6.col-md-6
+            a.thumbnail(href='/live-tuning')
+              .caption
+                h4 Live Tuning
+              img(src='/thumbnails/live-tuning.jpg', alt='(Click to see more details about Live Tuning.)')
+      section
+        h1#projects Projects
+        p
+          | Research projects since 2009 in reverse chronological order. Labels with
+          i.glyphicon.glyphicon-calendar
+          | show terms for active development.
+        .row
+          .project.col-xs-6.col-sm-4.col-md-3
+            a.thumbnail(href='http://f3js.org/about?lang=en')
+              .caption
+                h4(rel='tooltip', title='f3.js: A Parametric Design Tool of Physical Computing Devices for Both Interaction Designers and End-users') f3.js
+                p
+                  span.label.label-default
+                    i.glyphicon.glyphicon-calendar.icon-white
+                    | '15-
+                  span.label.label-info(rel='tooltip', data-original-title='Integrated Development Environment')
+                    i.glyphicon.glyphicon-tag.icon-white
+                    | IDE
+                  span.label.label-info(rel='tooltip', data-original-title='Natural User Interface')
+                    i.glyphicon.glyphicon-tag.icon-white
+                    | NUI
+              img(src='/thumbnails/f3js.png', alt='(Click to see more details about f3js.)')
+          .project.col-xs-6.col-sm-4.col-md-3
+            a.thumbnail(href='http://textalive.jp/about?lang=en')
+              .caption
+                h4(rel='tooltip', title='TextAlive: Integrated Design Environment for Kinetic Typography') TextAlive
+                p
+                  span.label.label-default
+                    i.glyphicon.glyphicon-calendar.icon-white
+                    | '14-
+                  span.label.label-info(rel='tooltip', data-original-title='Creativity Support')
+                    i.glyphicon.glyphicon-tag.icon-white
+                    | CS
+                  span.label.label-info(rel='tooltip', data-original-title='Integrated Development Environment')
+                    i.glyphicon.glyphicon-tag.icon-white
+                    | IDE
+                  span.label.label-info(rel='tooltip', data-original-title='Human-Music Interaction')
+                    i.glyphicon.glyphicon-tag.icon-white
+                    | Music
+              img(src='/thumbnails/textalive.png', alt='(Click to see more detail about TextAlive.)')
+          .project.col-xs-6.col-sm-4.col-md-3
+            a.thumbnail(href='https://staff.aist.go.jp/jun.kato/CrossSong/')
+              .caption
+                h4(rel='tooltip', title='CrossSong Puzzle: Generating and Unscrambling Music Mash-ups with Real-time Interactivity') CrossSong
+                p
+                  span.label.label-success(rel='tooltip', data-original-title='Co-authored')
+                    i.glyphicon.glyphicon-user
+                  span.label.label-default
+                    i.glyphicon.glyphicon-calendar.icon-white
+                    | '15
+                  span.label.label-info(rel='tooltip', data-original-title='Human-Music Interaction')
+                    i.glyphicon.glyphicon-tag.icon-white
+                    | Music
+              img(src='/thumbnails/crosssong.png', alt='(Click to see more details about CrossSong Puzzle.)')
+          .project.col-xs-6.col-sm-4.col-md-3
+            a.thumbnail(href='/sharedo/')
+              .caption
+                h4(rel='tooltip', title='Sharedo') Sharedo
+                p
+                  span.label.label-default
+                    i.glyphicon.glyphicon-calendar.icon-white
+                    | '11-14
+                  span.label.label-info(rel='tooltip', data-original-title='Robot Application')
+                    i.glyphicon.glyphicon-tag.icon-white
+                    | Robot
+              img(src='/thumbnails/sharedo.jpg', alt='(Click to see more detail about Sharedo.)')
+          .project.col-xs-6.col-sm-4.col-md-3
+            a.thumbnail(href='/visionsketch/')
+              .caption
+                h4(rel='tooltip', title='VisionSketch: Integrated Support for Example-Centric Programming of Image Processing Applications') VisionSketch
+                p
+                  span.label.label-default
+                    i.glyphicon.glyphicon-calendar.icon-white
+                    | '13-14
+                  span.label.label-info(rel='tooltip', data-original-title='Integrated Development Environment')
+                    i.glyphicon.glyphicon-tag.icon-white
+                    | IDE
+                  span.label.label-info(rel='tooltip', data-original-title='Natural User Interface')
+                    i.glyphicon.glyphicon-tag.icon-white
+                    | NUI
+              img(src='/thumbnails/visionsketch.jpg', alt='(Click to see more detail about VisionSketch.)')
+          .project.col-xs-6.col-sm-4.col-md-3
+            a.thumbnail(href='http://www-ui.is.s.u-tokyo.ac.jp/~fukahori/capstudio/capstudio_en.html')
+              .caption
+                h4(rel='tooltip', title='CapStudio: An Interactive Screencast for Visual Application Development') CapStudio
+                p
+                  span.label.label-success(rel='tooltip', data-original-title='Co-authored')
+                    i.glyphicon.glyphicon-user
+                  span.label.label-default
+                    i.glyphicon.glyphicon-calendar.icon-white
+                    | '12-14
+                  span.label.label-info(rel='tooltip', data-original-title='Integrated Development Environment')
+                    i.glyphicon.glyphicon-tag.icon-white
+                    | IDE
+              img(src='/thumbnails/capstudio.jpg', alt='(Click to see more detail about CapStudio.)')
+          .project.col-xs-6.col-sm-4.col-md-3
+            a.thumbnail(href='/touchdevelop/')
+              .caption
+                h4(rel='tooltip', title='It's Alive! Continuous Feedback in UI Programming') It's alive! (TouchDevelop)
+                p
+                  span.label.label-default
+                    i.glyphicon.glyphicon-calendar.icon-white
+                    | '12-13
+                  span.label.label-info(rel='tooltip', data-original-title='Integrated Development Environment')
+                    i.glyphicon.glyphicon-tag.icon-white
+                    | IDE
+              img(src='/thumbnails/touchdevelop.jpg', alt='(Click to see more detail about DejaVu.)')
+          .project.col-xs-6.col-sm-4.col-md-3
+            a.thumbnail(href='/picode/')
+              .caption
+                h4(rel='tooltip', title='Picode: Inline Photos Representing Posture Data in Source Code') Picode
+                p
+                  span.label.label-default
+                    i.glyphicon.glyphicon-calendar.icon-white
+                    | '11-13
+                  span.label.label-info(rel='tooltip', data-original-title='Integrated Development Environment')
+                    i.glyphicon.glyphicon-tag.icon-white
+                    | IDE
+                  span.label.label-info(rel='tooltip', data-original-title='Robot Application')
+                    i.glyphicon.glyphicon-tag.icon-white
+                    | Robot
+              img(src='/thumbnails/picode.jpg', alt='(Click to see more detail about Roboko.)')
+          .project.col-xs-6.col-sm-4.col-md-3
+            a.thumbnail(href='/dejavu/')
+              .caption
+                h4(rel='tooltip', title='DejaVu: Integrated Support for Developing Interactive Camera-Based Programs') DejaVu
+                p
+                  span.label.label-default
+                    i.glyphicon.glyphicon-calendar.icon-white
+                    | '12
+                  span.label.label-info(rel='tooltip', data-original-title='Integrated Development Environment')
+                    i.glyphicon.glyphicon-tag.icon-white
+                    | IDE
+                  span.label.label-info(rel='tooltip', data-original-title='Natural User Interface')
+                    i.glyphicon.glyphicon-tag.icon-white
+                    | NUI
+              img(src='/thumbnails/dejavu.png', alt='(Click to see more detail about DejaVu.)')
+          .project.col-xs-6.col-sm-4.col-md-3
+            a.thumbnail(href='/phybots/')
+              .caption
+                h4(rel='tooltip', title='Phybots: A Toolkit for Prototyping Robotic Things') Phybots
+                p
+                  span.label.label-default
+                    i.glyphicon.glyphicon-calendar.icon-white
+                    | '09-12
+                  span.label.label-info(rel='tooltip', data-original-title='Prototyping Toolkit')
+                    i.glyphicon.glyphicon-tag.icon-white
+                    | Toolkit
+                  span.label.label-info(rel='tooltip', data-original-title='Robot Application')
+                    i.glyphicon.glyphicon-tag.icon-white
+                    | Robot
+              img(src='/thumbnails/phybots.jpg', alt='(Click to see more detail about Phybots.)')
+          .project.col-xs-6.col-sm-4.col-md-3
+            a.thumbnail(href='/surfboard/')
+              .caption
+                h4(rel='tooltip', title='Surfboard: Keyboard with Microphone as a Low-cost Interactive Surface') Surfboard
+                p
+                  span.label.label-default
+                    i.glyphicon.glyphicon-calendar.icon-white
+                    | '10
+                  span.label.label-info(rel='tooltip', data-original-title='Natural User Interface')
+                    i.glyphicon.glyphicon-tag.icon-white
+                    | NUI
+              img(src='/thumbnails/surfboard.jpg', alt='(Click to see more detail about Surfboard.)')
+          .project.col-xs-6.col-sm-4.col-md-3
+            a.thumbnail(href='/pressing/')
+              .caption
+                h4(rel='tooltip', title='Pressing: A Pressure-sensitive Interpreter with Visual Feedbacks') Pressing
+                p
+                  span.label.label-default
+                    i.glyphicon.glyphicon-calendar.icon-white
+                    | '09
+                  span.label.label-info(rel='tooltip', data-original-title='Integrated Development Environment')
+                    i.glyphicon.glyphicon-tag.icon-white
+                    | IDE
+                  span.label.label-info(rel='tooltip', data-original-title='Natural User Interface')
+                    i.glyphicon.glyphicon-tag.icon-white
+                    | NUI
+              img(src='/thumbnails/pressing.jpg', alt='(Click to see more detail about Pressing.)')
+          .project.col-xs-6.col-sm-4.col-md-3
+            a.thumbnail(href='http://www.jst.go.jp/erato/igarashi/en/projects/CRISTAL/')
+              .caption
+                h4(rel='tooltip', title='CRISTAL: Control of Remotely Interfaced Systems Using Touch-Based Actions in Living Spaces') CRISTAL
+                p
+                  span.label.label-success(rel='tooltip', data-original-title='Co-authored')
+                    i.glyphicon.glyphicon-user
+                  span.label.label-default
+                    i.glyphicon.glyphicon-calendar.icon-white
+                    | '09
+                  span.label.label-info(rel='tooltip', data-original-title='Robot Application')
+                    i.glyphicon.glyphicon-tag.icon-white
+                    | Robot
+                  span.label.label-info(rel='tooltip', data-original-title='Natural User Interface')
+                    i.glyphicon.glyphicon-tag.icon-white
+                    | NUI
+              img(src='/thumbnails/cristal.jpg', alt='(Click to see more detail about CRISTAL.)')
+          .project.col-xs-6.col-sm-4.col-md-3
+            a.thumbnail(href='/multirobot/')
+              .caption
+                h4(rel='tooltip', title='Multi-touch Interface for Controlling Multiple Mobile Robots') Multi-touch Multi-robot
+                p
+                  span.label.label-default
+                    i.glyphicon.glyphicon-calendar.icon-white
+                    | '08-09
+                  span.label.label-info(rel='tooltip', data-original-title='Robot Application')
+                    i.glyphicon.glyphicon-tag.icon-white
+                    | Robot
+                  span.label.label-info(rel='tooltip', data-original-title='Natural User Interface')
+                    i.glyphicon.glyphicon-tag.icon-white
+                    | NUI
+              img(src='/thumbnails/multirobot.jpg', alt='(Click to see more detail about Multi-touch Interface for Controlling Multiple Mobile Robots.)')
+      //        
+          <h2 id="collaborations">Collaborations</h2>
+          <div class="row">
+            <div class="col-md-3">
+              <p>Collaboration projects since 2009 in reverse chronological order:</p>
+            </div>
+            <div class="col-md-9">
+              <ul class="thumbnails">
+        
+              </ul>
+            </div>
+          </div>
+        </section>
+        
+      section
+        h1#side-projects Side Projects
+        p
+          | Projects not meant to be published as research paper in reverse chronological order. Labels with
+          i.glyphicon.glyphicon-calendar
+          | show terms for active development.
+        .row
+          //            
+            			  <ul>
+            			    <li>科学技術コミュニケーション</li>
+            			    <li>インタラクション考証協力</li>
+            			    <li><a href="homehack">家電ハック</a></li>
+            			  </ul>
+            			  
+          .project.col-xs-6.col-sm-4.col-md-3
+            a.thumbnail(href='/openpool/')
+              .caption
+                h4(rel='tooltip', title='OpenPool: Open-source Billiard Table as an Interactive Surface') OpenPool
+                p
+                  span.label.label-default
+                    i.glyphicon.glyphicon-calendar.icon-white
+                    | '12-13
+                  span.label.label-info(rel='tooltip')
+                    i.glyphicon.glyphicon-tag.icon-white
+                    | Toolkit
+                  span.label.label-info(rel='tooltip', data-original-title='Natural User Interface')
+                    i.glyphicon.glyphicon-tag.icon-white
+                    | NUI
+              img(src='/thumbnails/openpool.jpg', alt='(Click to see more detail about OpenPool.)')
+          .project.col-xs-6.col-sm-4.col-md-3
+            a.thumbnail(href='/homehack/')
+              .caption
+                h4(rel='tooltip', title='Home hacking') Home hacking
+                p
+                  span.label.label-default
+                    i.glyphicon.glyphicon-calendar.icon-white
+                    | '11-
+                  span.label.label-info(rel='tooltip', data-original-title='Natural User Interface')
+                    i.glyphicon.glyphicon-tag.icon-white
+                    | NUI
+              img(src='/thumbnails/homehack.jpg', alt='(Click to see more detail about home hacking.)')
+          .project.col-xs-6.col-sm-4.col-md-3
+            .thumbnail
+              .caption
+                h4(rel='tooltip', title='RemotiTunes: Listen to Your Home iTunes Library from Anywhere') RemotiTunes
+                p
+                  span.label.label-default
+                    i.glyphicon.glyphicon-calendar.icon-white
+                    | '11
+              img(src='/thumbnails/remotitunes.jpg')
+          .project.col-xs-6.col-sm-4.col-md-3
+            a.thumbnail(href='/intelliviewer/')
+              .caption
+                h4(rel='tooltip', title='IntelliViewer: Hierarchical Source Code Viewer on Adaptive Keyboard') IntelliViewer
+                p
+                  span.label.label-default
+                    i.glyphicon.glyphicon-calendar.icon-white
+                    | '10
+                  span.label.label-info(rel='tooltip', data-original-title='Integrated Development Environment')
+                    i.glyphicon.glyphicon-tag.icon-white
+                    | IDE
+                  span.label.label-info(rel='tooltip', data-original-title='Natural User Interface')
+                    i.glyphicon.glyphicon-tag.icon-white
+                    | NUI
+              img(src='/thumbnails/intelliviewer.jpg', alt='(Click to see more detail about IntelliViewer.)')
+          .project.col-xs-6.col-sm-4.col-md-3
+            .thumbnail
+              .caption
+                h4(rel='tooltip', title='Chippie: CMS as Hybrid-system with Pluggable Pieces') Chippie
+                p
+                  span.label.label-default
+                    i.glyphicon.glyphicon-calendar.icon-white
+                    | '06-08
+                  span.label.label-info(rel='tooltip')
+                    i.glyphicon.glyphicon-tag.icon-white
+                    | Toolkit
+              img(src='/thumbnails/chippie.png')
+          .project.col-xs-6.col-sm-4.col-md-3
+            .thumbnail
+              .caption
+                h4 arX MusicPlayer
+                p
+                  span.label.label-default
+                    i.glyphicon.glyphicon-calendar.icon-white
+                    | '02-07
+              img(src='/thumbnails/arxmusicplayer.jpg')
+          .project.col-xs-6.col-sm-4.col-md-3
+            .thumbnail
+              .caption
+                h4 arX Launcher
+                p
+                  span.label.label-default
+                    i.glyphicon.glyphicon-calendar.icon-white
+                    | '04
+              img(src='/thumbnails/arxlauncher.png')
+      section
+        h1#contact Contact
+        .row
+          .col-md-6
+            address
+              strong
+                a(href='https://staff.aist.go.jp/m.goto/MIG/') Media Interaction Group
+                | ,
+                a(href='https://www.itri.aist.go.jp/en/')
+                  abbr(title='Information Technology Research Institute') ITRI
+                | ,
+                a(href='https://www.aist.go.jp/index_en.html')
+                  abbr(title='National Institute of Advanced Industrial Science and Technology') AIST
+              br
+              | Central 2, 1-1-1 Umezono, Tsukuba, Ibaraki, 305-8568, Japan.
+              br
+              abbr(title='Phone') P:
+              | +81 29-862-6622
+              br
+              abbr(title='Fax') F:
+              | +81 29-861-3313
+              //                
+                        <del><strong><a href="http://www-ui.is.s.u-tokyo.ac.jp/en/">User Interface Research Laboratory (Igarashi Laboratory)</a></strong><br/>
+                        Science bldg. 7, Room 302, The University of Tokyo, 7-3-1 Hongo, Bunkyo-ku, Tokyo, 113-0033, Tokyo.</del>
+                        <abbr title="Phone">P:</abbr> +81 <del>3-5841-4091</del><br/>
+                        <abbr title="Fax">F:</abbr> +81 <del>3-5841-4105</del>
+                
+          .col-md-6
+            address
+              strong Jun Kato
+              br
+              a(href='mailto:i@junkato.jp')
+                i.glyphicon.glyphicon-envelope
+                | i@junkato.jp
+              a(href='https://facebook.com/jun.kato')
+                i.glyphicon.glyphicon-user
+                | facebook.com/jun.kato
+              a(href='https://jp.linkedin.com/in/jkato')
+                i.glyphicon.glyphicon-user
+                | jp.linkedin.com/in/jkato
+              br
+              a.twitter-follow-button(href='https://twitter.com/junkato', data-show-count='false', data-lang='en') twitter.com/junkato
+              script var f=function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}};!f(document,"script","twitter-wjs1");
+              a.twitter-follow-button(href='https://twitter.com/arcatdmz', data-show-count='false', data-lang='ja') twitter.com/arcatdmz
+              script !f(document,"script","twitter-wjs2");
+      footer
+        hr
+        p
+          | ©
+          a(href='mailto:i@junkato.jp') Jun Kato
+          | 2012-2017 |
+          a(href='/ja/')
+            | 日本語
+            i.translation.icon-ja
+      // Scripts 
+      script(src='//code.jquery.com/jquery-1.11.3.min.js')
+      script(src='/js/bootstrap.min.js')
+      script(type='text/javascript') (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2538649-10', 'auto');
+  ga('send', 'pageview');
+
+  $(function(){
+    var a = $('a.bibtex'), lastTooltip = null;
+    a.tooltip({ trigger: "manual", html: true, template: '<div class="tooltip bibtex"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>' });
+    a.click(function(e){ e.preventDefault(); if (lastTooltip !== this) $(lastTooltip).tooltip('hide'); lastTooltip = this; $(lastTooltip).tooltip('toggle'); return false; });
+  });
+      script $(function(){
+  var links = $('#vision a');
+  links.click(function() { return false; });
+  links.tooltip();
+
+  $('#profile img').tooltip();
+  $('.project .caption span.label').tooltip();
+  $('.project .caption h4').tooltip();
+});
+    // /container 
