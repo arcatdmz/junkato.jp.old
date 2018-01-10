@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html><html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="Jun Kato" />
+    <meta property="fb:admins" content="503220390" />
+    <link rev="made" href="mailto:i@junkato.jp" />
+    <title>It's alive! (TouchDevelop) | junkato.jp</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Droid+Sans" />
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/main.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="navbar navbar-default navbar-fixed-top" data-dropdown="dropdown" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Jun Kato</a>
+        </div>
+        <div id="navigation" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/#about">Profile</a></li>
+            <li class="active"><a href="/#projects">Projects</a></li>
+            <li><a href="/publications/">Awards &amp; Publications</a></li>
+            <li><a href="/fun/">Fun</a></li>
+            <li><a href="/#contact">Contact</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/ja/touchdevelop/">日本語<i class="translation icon-ja"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- container --><div class="container">
+
+<section>
+  <h1>It's Alive! Continuous Feedback in UI Programming</h1>
+  <p><span class="label label-default"><i class="glyphicon glyphicon-calendar"></i> '12</span>
+    <span class="label label-info" rel="tooltip" data-original-title="Integrated Development Environment"><i class="glyphicon glyphicon-tag"></i> IDE</span>
+    <span class="label label-danger" rel="tooltip"><i class="glyphicon glyphicon-folder-open"></i> ACM PLDI '13</span>
+      </p>
+</section>
+
+<section>
+  <div class="row">
+    <div class="col-md-6">
+      <p>Live programming allows programmers to edit the code of a running program and immediately see the effect of the code changes. This tightening of the traditional edit-compile-run cycle reduces the cognitive gap between program code and behavior, improving the learning experience of beginning programmers while boosting the productivity of seasoned ones. Unfortunately, live programming is difficult to realize in practice as imperative languages lack well-defined abstraction boundaries that make live programming responsive or its feedback comprehensible.</p>
+      <p>This paper enables live programming for user interface programming by cleanly separating the rendering and non-rendering aspects of a UI program, allowing the display to be refreshed on a code change without restarting the program. A type and effect system formalizes this separation and provides an evaluation model that incorporates the code update step. By putting live programming on a more formal footing, we hope to enable critical and technical discussion of live programming systems.</p>
+      <p>This work was done during my internship at Microsoft Research Redmond <a href="http://research.microsoft.com/touchdevelop/">TouchDevelop team</a> of <a href="http://research.microsoft.com/rise/" title="Research in Software Engineering Group">RiSE Group</a>.</p>
+    </div>
+    <div class="col-md-6">
+      <div class="thumbnail"><iframe width="100%" height="315" src="//www.youtube.com/embed/GaVbYx-NN0o" frameborder="0" allowfullscreen></iframe></div>
+      <div class="thumbnail"><iframe width="100%" height="315" src="//www.youtube.com/embed/D1UB73y4GGo" frameborder="0" allowfullscreen></iframe></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Publication</h2>
+  <ul>
+    <li id="pldi2013-kato-alive" data-numpages="10">Sebastian Burckhardt, Manuel Fahndrich, Peli Halleux, Sean McDirmid, Michal Moskal, Nikolai Tillmann, <u>Jun Kato</u>, <b>&quot;It's Alive! Continuous Feedback in UI Programming&quot;</b>, In <i>PLDI '13: Proceedings of the 34th ACM SIGPLAN Conference on Programming Language Design and Implementation</i>. pp.95-104, 2013. <div class="btn-group biblinks"><a href="http://doi.acm.org/10.1145/2491956.2462170"><i class="glyphicon glyphicon-barcode"></i> <abbr title="Digital Object Identifier">DOI</abbr></a> <a href="http://research.microsoft.com/apps/pubs/default.aspx?id=189242"><i class="glyphicon glyphicon-file"></i> PDF</a> <a href="http://research.microsoft.com/apps/pubs/default.aspx?id=189242"><i class="glyphicon glyphicon-play-circle"></i> Slides</a> <a href="http://touchdevelop.com/app/"><i class="glyphicon glyphicon-info-sign"></i> Website</a></div> <a href="#" class="bibtex" data-title="&lt;textarea onclick=&quot;this.focus();this.select();return false;&quot; readonly=&quot;readonly&quot;&gt;@inproceedings{pldi2013-kato-alive,
+  title={It's Alive! Continuous Feedback in UI Programming},
+  author={Sebastian Burckhardt and Manuel Fahndrich and Peli Halleux and Sean McDirmid and Michal Moskal and Nikolai Tillmann and Jun Kato}
+  booktitle={PLDI '13: Proceedings of the 34th ACM SIGPLAN Conference on Programming Language Design and Implementation},
+  pages={95--104},
+  year={2013}
+}&lt;/textarea&gt;"><i class="glyphicon glyphicon-book"></i> BibTeX</a></li>
+  </ul>
+</section>
+
+<footer>
+  <hr />
+  <p>&copy; <a href="mailto:i@junkato.jp">Jun Kato</a> 2012-2017 | <a href="/ja/touchdevelop/">日本語<i class="translation icon-ja"></i></a></p>
+</footer>
+
+<!-- Scripts -->
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2538649-10', 'auto');
+  ga('send', 'pageview');
+
+  $(function(){
+    var a = $('a.bibtex'), lastTooltip = null;
+    a.tooltip({ trigger: "manual", html: true, template: '<div class="tooltip bibtex"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>' });
+    a.click(function(e){ e.preventDefault(); if (lastTooltip !== this) $(lastTooltip).tooltip('hide'); lastTooltip = this; $(lastTooltip).tooltip('toggle'); return false; });
+  });
+</script>
+<script>
+
+$(function(){
+  $('h1 p span.label').tooltip();
+});
+
+</script>
+
+    </div><!-- /container -->
+  </body>
+</html>

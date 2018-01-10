@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html><html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="加藤 淳" />
+    <meta property="fb:admins" content="503220390" />
+    <link rev="made" href="mailto:i@junkato.jp" />
+    <title>It's alive! (TouchDevelop) | junkato.jp</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Droid+Sans" />
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/main.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="navbar navbar-default navbar-fixed-top" data-dropdown="dropdown" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
+            <span class="sr-only">ナビの表示を切り替える</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/ja/">加藤 淳</a>
+        </div>
+        <div id="navigation" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/ja/#about">自己紹介</a></li>
+            <li class="active"><a href="/ja/#projects">プロジェクト</a></li>
+            <li><a href="/ja/publications/">受賞歴と発表文献</a></li>
+            <li><a href="/ja/fun/">お楽しみ</a></li>
+            <li><a href="/ja/#contact">連絡先</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/ja/blog/">ブログ<i class="blog glyphicon glyphicon-pencil"></i></a></li>
+            <li><a href="/touchdevelop/">English<i class="translation glyphicon glyphicon-text-background"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- container --><div class="container">
+
+<section>
+  <h1>It's Alive! Continuous Feedback in UI Programming</h1>
+  <p><span class="label label-default"><i class="glyphicon glyphicon-calendar"></i> '12</span>
+    <span class="label label-info" rel="tooltip" data-original-title="Integrated Development Environment"><i class="glyphicon glyphicon-tag"></i> IDE</span>
+    <span class="label label-danger" rel="tooltip"><i class="glyphicon glyphicon-folder-open"></i> ACM PLDI '13</span>
+      </p>
+</section>
+
+<section>
+  <div class="row">
+    <div class="col-md-6">
+      <h2>概要</h2>
+      <p>Live Programmingは、プログラムを走らせたままコードを編集し、その変更を直ちに反映させて変化を観察することを可能にする技術である。このように、伝統的な編集、コンパイル、実行というサイクルを圧縮することで、プログラムのコードと振る舞いの間を行ったり来たりする認知的なギャップを小さくできる。そうすることで、プログラミング初学者がよりよくプログラミングを学べるようになり、経験者ならば生産性を向上できることが期待される。しかしながら、Model-Viewなどの切り分けがはっきりせず抽象化の足りない命令型言語でLive Programmingを実現しようとすると、応答性が悪くなったりフィードバックが分かりにくくなったりして困難が伴う。</p>
+      <p>本論文では、ユーザインタフェースを伴う一般的なプログラムの実装において、次のようにLive Programmingを実現する。すなわち、ユーザインタフェースのレンダリングを行う部分とそれ以外を綺麗に分けることによって、コードに変更があるたびに、プログラム自体を再起動せずともレンダリングだけをやりなおすことができるようにする。さらに、型(と副作用)システムを用いて、この切り分けを形式化し、コード変更時の処理手順を与える評価モデルを与える。このように、Live Programmingに対してより形式的な基盤を与えることで、Live Programmingシステムに関する本質的で技術的な議論を可能にしたい。</p>
+      <p>本研究は、Microsoft Research Redmond <a href="http://research.microsoft.com/rise/" title="Research in Software Engineering Group">RiSE Group</a>の<a href="http://research.microsoft.com/touchdevelop/">TouchDevelopチーム</a>における3か月のインターンの成果物である。<a href="http://research.microsoft.com/people/sburckha/">Sebastian Burckhardt</a>と<a href="http://research.microsoft.com/people/moskal/">Michał Moskal</a>がメンターであった。Microsoft Research Asiaの<a href="http://research.microsoft.com/people/smcdirm/">Sean McDirmid</a>とも連絡を取り、MSRの2つのキャンパス間の協力体制を築いて研究を進めた。</p>
+    </div>
+    <div class="col-md-6">
+      <div class="thumbnail"><iframe width="100%" height="315" src="//www.youtube.com/embed/GaVbYx-NN0o" frameborder="0" allowfullscreen></iframe></div>
+      <div class="thumbnail"><iframe width="100%" height="315" src="//www.youtube.com/embed/D1UB73y4GGo" frameborder="0" allowfullscreen></iframe></div>
+    </div>
+  </div>
+  <h2>技術デモ</h2>
+  <div class="alert alert-info">
+  <p>本研究で扱っている技術によるLive Programmingを体験してみたい方は<a href="https://www.touchdevelop.com/rthv">TouchDevelop Web Appの当該機能を利用しているスクリプト</a>を開いてみてください。<a href="https://www.touchdevelop.com/docs/beatboxtutorial">公式チュートリアル</a>もあります。</p>
+  <p>なお、本機能は <code>page</code> を使ったときだけ有効化されます。TouchDevelopには何でもpostできる <code>wall</code> というレガシーなコンセプトがありますが、 <code>page</code> はその後継として、互換性を捨てて定義されています。</p>
+  </div>
+  <ol>
+    <li><a href="http://touchdevelop.com">TouchDevelop</a>にログインする。</li>
+    <li><a href="https://www.touchdevelop.com/rthv">リンク先</a>のヘッダにある「<b>edit in TouchDevelop</b>」からスクリプトを開く。</li>
+    <li>「<b>run</b>」ボタンでスクリプトを実行する。</li>
+    <li>適当なところで画面右上の「<b>一時停止</b>」ボタンをクリック(またはタップ)すると、イベントハンドラが全て無効化されて「<b>編集モード</b>」になる。</li>
+    <li>画面上で「<b>box</b>」と呼ばれる任意のGUIコンポーネントをクリックすると選択でき、隣に「<b>edit</b>」ボタンが現れる。</li>
+    <li>「edit」をクリックすると、コードエディタの当該boxを表示する処理に飛ぶ。</li>
+  </ol>
+  <ul>
+    <li>コードエディタの左隣には画面の縮小表示「<b>Live view</b>」が表示される。(WindowBuilderやXAMLエディタなどでよくある<b>pre</b>viewでないことに注意)コードを編集するとLive viewに即座に反映される。</li>
+    <li>クリックで選択したものの他に現在アクティブな行から生成されるboxがあれば(例えばforループや関数内のbox)、赤い枠線でハイライトされる。</li>
+    <li>ソフトウェアキーボードにはboxの書式プロパティが並ぶ。どれかクリックすると、既にプロパティを指定している行があればそこに飛ぶ。なければ新しいプロパティ指定文が適当な位置に挿入される。</li>
+  </ul>
+  <ol start="6">
+    <li>コード編集に満足したら「<b>再開</b>」ボタンをクリックするとプログラムが再開される。</li>
+  </ol>
+</section>
+
+<section>
+  <h2>発表文献</h2>
+  <ul>
+    <li id="pldi2013-kato-alive" data-numpages="10">Sebastian Burckhardt, Manuel Fahndrich, Peli Halleux, Sean McDirmid, Michal Moskal, Nikolai Tillmann, <u>Jun Kato</u>, <b>&quot;It's Alive! Continuous Feedback in UI Programming&quot;</b>, In <i>PLDI '13: Proceedings of the 34th ACM SIGPLAN Conference on Programming Language Design and Implementation</i>. pp.95-104, 2013. <div class="btn-group biblinks"><a href="http://doi.acm.org/10.1145/2491956.2462170"><i class="glyphicon glyphicon-barcode"></i> <abbr title="Digital Object Identifier">DOI</abbr></a> <a href="http://research.microsoft.com/apps/pubs/default.aspx?id=189242"><i class="glyphicon glyphicon-file"></i> PDF</a> <a href="http://research.microsoft.com/apps/pubs/default.aspx?id=189242"><i class="glyphicon glyphicon-play-circle"></i> Slides</a> <a href="http://touchdevelop.com/app/"><i class="glyphicon glyphicon-info-sign"></i> Website</a></div> <a href="#" class="bibtex" data-title="&lt;textarea onclick=&quot;this.focus();this.select();return false;&quot; readonly=&quot;readonly&quot;&gt;@inproceedings{pldi2013-kato-alive,
+  title={It's Alive! Continuous Feedback in UI Programming},
+  author={Sebastian Burckhardt and Manuel Fahndrich and Peli Halleux and Sean McDirmid and Michal Moskal and Nikolai Tillmann and Jun Kato}
+  booktitle={PLDI '13: Proceedings of the 34th ACM SIGPLAN Conference on Programming Language Design and Implementation},
+  pages={95--104},
+  year={2013}
+}&lt;/textarea&gt;"><i class="glyphicon glyphicon-book"></i> BibTeX</a></li>
+  </ul>
+</section>
+
+<footer>
+  <hr />
+  <p>&copy; <a href="mailto:i@junkato.jp">加藤 淳</a> 2012-2017 | <a href="/touchdevelop/">English<i class="translation glyphicon glyphicon-text-background"></i></a></p>
+</footer>
+
+<!-- Scripts -->
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2538649-10', 'auto');
+  ga('send', 'pageview');
+
+  $(function(){
+    var a = $('a.bibtex'), lastTooltip = null;
+    a.tooltip({ trigger: "manual", html: true, template: '<div class="tooltip bibtex"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>' });
+    a.click(function(e){ e.preventDefault(); if (lastTooltip !== this) $(lastTooltip).tooltip('hide'); lastTooltip = this; $(lastTooltip).tooltip('toggle'); return false; });
+  });
+</script>
+<script>
+
+$(function(){
+  $('h1 p span.label').tooltip();
+});
+
+</script>
+
+    </div><!-- /container -->
+  </body>
+</html>

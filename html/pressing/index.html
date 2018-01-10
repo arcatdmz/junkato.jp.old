@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html><html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="Jun Kato" />
+    <meta property="fb:admins" content="503220390" />
+    <link rev="made" href="mailto:i@junkato.jp" />
+    <title>Pressing | junkato.jp</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Droid+Sans" />
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/main.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="navbar navbar-default navbar-fixed-top" data-dropdown="dropdown" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Jun Kato</a>
+        </div>
+        <div id="navigation" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/#about">Profile</a></li>
+            <li class="active"><a href="/#projects">Projects</a></li>
+            <li><a href="/publications/">Awards &amp; Publications</a></li>
+            <li><a href="/fun/">Fun</a></li>
+            <li><a href="/#contact">Contact</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/ja/pressing/">日本語<i class="translation icon-ja"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- container --><div class="container">
+
+<section>
+  <h1>Pressing: A Pressure-sensitive Interpreter with Visual Feedbacks</h1>
+    <p><span class="label label-default"><i class="glyphicon glyphicon-calendar"></i> '10</span>
+      <span class="label label-info" rel="tooltip" data-original-title="Integrated Development Environment"><i class="glyphicon glyphicon-tag"></i> IDE</span>
+      <span class="label label-info" rel="tooltip" data-original-title="Natural User Interface"><i class="glyphicon glyphicon-tag"></i> NUI</span>
+      <span class="label label-danger" rel="tooltip"><i class="glyphicon glyphicon-folder-open"></i> ACM UIST '09 Student Innovation Contest</span>
+        </p>
+</section>
+
+<section>
+  <h2>Abstract</h2>
+  <div class="row">
+    <div class="col-sm-8 col-md-9">
+      <p>Pressing is a pressure-sensitive programming environment with visual feedbacks of the built-in 2D physical simulator. It runs on a PC with <a href="http://www.youtube.com/watch?v=1zo0kJ_wi80">a practical pressure-sensitive keyboard</a> developed by <a href="http://www.microsoft.com/appliedsciences/">Microsoft Applied Science Group</a>.</p>
+      <p>This work was presented at UIST 2009 <a href="http://www.acm.org/uist/uist2009/call/contest.htmll">Student Innovation Contest</a> with <a href="/publications/uist2009-kato-pressing-flyer.pdf"><i class="icon-file"></i>a flyer</a>.</p>
+    </div>
+    <div class="col-sm-4 col-md-3">
+      <div class="thumbnail"><img src="/thumbnails/pressing.jpg" alt="Pressing" /></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="row">
+    <div class="col-sm-12 col-md-9">
+      <h2>Programming Experience</h2>
+      <p>When the programmer runs the software, a vacant screen appears with a text box. He can start typing immediately and there is no program compilation; The programming experience is completely live and direct.</p>
+      <p>For example, when he types <code>new Ball()</code> and hits the enter key, a ball apears on the screen. The size of the ball is defined according to how strong the class name <i>Ball</i> is typed.</p>
+      <p>There are several interesting predefined classes. For instance, these two sentences will bind the ball instance to a variable <i>b</i> and its track will be painted with a red brush. The brush width is defined by how strong <i>Brush</i> is typed.</p>
+      <pre>b = new Ball(); b.pen(new Brush(255,0,0));</pre>
+      <p>The programmer can interact with the instantiated ball objects not only by writing code,</p>
+      <pre>World.setGravity(0, 0.98); b.setSpeed(100);</pre>
+      <p>but also by directly touching them using a mouse cursor. This environment is equipped with a two-dimensional physics simulator and thus provides natural interaction experience.</p>
+      <h2>Implementation</h2>
+      <p>This integrated development environment (IDE) has its original interpreter named <i>Kotosaka</i> which interprets a JavaScript-like language. The language shares basic ideas of object-oriented programming such as classes (methods and fields), functions and variables. Variables can be used without declaration and are dynamically typed, capable of storing primitive values (boolean, integer and string,) class instances, and function objects.</p>
+      <p>The IDE contains a two-dimensional virtual world equipped with a <a href="http://box2d.org/">Box2D</a>-based physics simulator and provides interesting APIs to interact with the virtual world. Examples are shown below in the figure.</p>
+      <div class="thumbnail"><img src="http://digitalmuseum.jp/en/software/pressing/images/usage.png" /></div>
+    </div>
+    <div class="col-xs-6 col-sm-6 col-md-3">
+      <div class="thumbnail"><a href="/pressing/pressing.png"><img src="/pressing/pressing.png" width="260" alt="Pressing screen shot" /></a></div>
+    </div>
+    <div class="col-xs-6 col-sm-6 col-md-3">
+      <div class="thumbnail"><a href="http://www.flickr.com/photos/zhiquan/3989241000/"><img src="/pressing/3989241000_35cb13136a_o.jpg" alt="Demonstration at UIST '09" /></a></div>
+    </div>
+  </div>
+</section>
+
+
+<footer>
+  <hr />
+  <p>&copy; <a href="mailto:i@junkato.jp">Jun Kato</a> 2012-2017 | <a href="/ja/pressing/">日本語<i class="translation icon-ja"></i></a></p>
+</footer>
+
+<!-- Scripts -->
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2538649-10', 'auto');
+  ga('send', 'pageview');
+
+  $(function(){
+    var a = $('a.bibtex'), lastTooltip = null;
+    a.tooltip({ trigger: "manual", html: true, template: '<div class="tooltip bibtex"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>' });
+    a.click(function(e){ e.preventDefault(); if (lastTooltip !== this) $(lastTooltip).tooltip('hide'); lastTooltip = this; $(lastTooltip).tooltip('toggle'); return false; });
+  });
+</script>
+<script>
+
+$(function(){
+  $('h1 p span.label').tooltip();
+});
+
+</script>
+
+    </div><!-- /container -->
+  </body>
+</html>

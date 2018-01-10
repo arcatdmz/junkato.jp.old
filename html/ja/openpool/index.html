@@ -1,0 +1,196 @@
+﻿<!DOCTYPE html><html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="加藤 淳" />
+    <meta property="fb:admins" content="503220390" />
+    <link rev="made" href="mailto:i@junkato.jp" />
+    <title>OpenPool | junkato.jp</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Droid+Sans" />
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/main.css" rel="stylesheet">
+    <link href="http://twitter.github.com/bootstrap/assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="navbar navbar-default navbar-fixed-top" data-dropdown="dropdown" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
+            <span class="sr-only">ナビの表示を切り替える</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/ja/">加藤 淳</a>
+        </div>
+        <div id="navigation" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/ja/#about">自己紹介</a></li>
+            <li><a href="/ja/#projects">プロジェクト</a></li>
+            <li><a href="/ja/publications/">受賞歴と発表文献</a></li>
+            <li><a href="/ja/fun/">お楽しみ</a></li>
+            <li><a href="/ja/#contact">連絡先</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/ja/blog/">ブログ<i class="blog glyphicon glyphicon-pencil"></i></a></li>
+            <li><a href="/openpool/">English<i class="translation glyphicon glyphicon-text-background"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- container --><div class="container">
+
+<section>
+  <h1>OpenPool: Open-source Billiard Table as an Interactive Surface</h1>
+  <p><span class="label label-default"><i class="glyphicon glyphicon-calendar"></i> '12-13</span>
+    <span class="label label-info" rel="tooltip"><i class="glyphicon glyphicon-tag"></i> Toolkit</span>
+    <span class="label label-info" rel="tooltip" data-original-title="Natural User Interface"><i class="glyphicon glyphicon-tag"></i> NUI</span>
+    <span class="label label-danger" rel="tooltip"><i class="glyphicon glyphicon-folder-open"></i> SxSW '13 Gaming Expo, Trade Show</span>
+      </p>
+  <div class="alert alert-info">OpenPool is a collaborative open-source project developed at <a href="http://github.com/openpool/openpool-core">GitHub</a>. 日本語の情報はただいま準備中です。</div>
+</section>
+
+<section>
+  <h2>概要</h2>
+  <div class="row">
+    <div class="col-sm-8 col-md-9">
+      <p>People love playing games. Games have been a good way to build social relations with others. Therefore, studying the impact of digital augmentation on such experience has been an interesting research topic in the field of Human-Computer Interaction. Ishii et al. proposed PingPongPlus <a href="#ppp">[1]</a>, a novel way of augmenting ping pong table with a set of microphone array in 1999. The project later became an open-source project in 2011 <a href="#pppp">[2]</a>, which needed some soldering to be deployed. We walk the same line with PingPongPlus, but with a billiard table and off-the-shelf hardware products.</p>
+
+<p>In this page, we introduce OpenPool, an open-source project that augments a standard billiard table with the cutting-edge computing technologies to provide the &quot;super-billiard&quot; experience.</p>
+    </div>
+    <div class="col-sm-4 col-md-3">
+      <div class="thumbnail"><img src="/thumbnails/openpool.jpg" alt="OpenPool" /></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="row">
+    <div class="col-md-6">
+<h2>実装</h2>
+
+<p>OpenPool is an open-source project that aims to be installed at as many places as possible so that more people can enjoy the super-billiard experience. Its hardware is easy to be deployed at any billiard tables and its software is easy to be installed on personal computers running Windows or Mac.</p>
+
+<p>Furthermore, the basic features of the software such as ball detection and pocket detection are exposed as simple APIs of Processing libraries. Therefore, the programmer can easily design his/her own super-billiard experience. There are currently two libraries: base library and pocket detection library. In the following subsections, we  describe these libraries in detail.</p>
+
+<h3>OpenPool core library</h3>
+
+<pre class="prettyprint linenums">OpenPool op = new OpenPool(this);
+
+op.updateBalls();
+for (int i = 0; i < op.balls; i ++) {
+  Ball ball = op.balls[i];
+  ellipse(ball.x, ball.y, 10, 10);
+  if (ball.prev != null) {
+    line(ball.x, ball.y, ball.prev.x, ball.prev.y);
+  }
+}</pre>
+
+<p>Minimum hardware setup of OpenPool consists of off-the-shelf products: two depth cameras ("Kinect" by Microsoft), a projector and a personal computer. Given the hardware setup, OpenPool base library computes ball positions and provide the information through simple APIs.</p>
+
+<p>The computation is a simple image processing pipeline. First, with some callibrations of the camera positions, two depth images from the cameras form one depth map on the billiard table. Then, the ball positions on the table are estimated from the depth map by background substraction and blob detection.</p>
+
+<h3>OpenPool pocket detection library</h3>
+
+<pre class="prettyprint linenums">OpenpoolBoostPocket p = new OpenpoolBoostPocket(this, "COM4");
+p.start();
+
+int[] pockets = p.getPockets();
+for (int i = 0; i < pockets.length; i++) {
+  if (pockets[i] > 0) {
+    print(pockets[i]);
+    print(" balls fell in the pocket no.");
+    println(i + 1);
+  }
+}</pre>
+
+<p>With the base library, the programmer can design a basic effect that responds to the ball positions. Though, the ball detection is not always stable due to environmental noise. This stability issue makes it difficult to design effect that fires when a ball falls into a pocket.</p>
+
+<p>To address the issue, we provide a set of additional hardware and software named "boost kit." The hardware is implemented with mbed and some basic sensors, whose circuit design is published as an open-hardware project. Future work includes devleopment of more boost kits for various purposes such as collision detection.</p>
+
+
+    </div>
+    <div class="col-md-6">
+      <div class="thumbnail"><iframe src="https://www.facebook.com/video/embed?video_id=608850275796418" width="100%" height="315" frameborder="0" allowfullscreen></iframe></div>
+      <div class="thumbnail"><iframe src="https://www.facebook.com/video/embed?video_id=614971478517631" width="100%" height="315" frameborder="0" allowfullscreen></iframe></div>
+      <div class="thumbnail"><iframe src="https://www.facebook.com/video/embed?video_id=615808058433973" width="100%" height="315" frameborder="0" allowfullscreen></iframe></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>関連研究</h2>
+  <ol>
+    <li id="ppp"><a href="http://tangible.media.mit.edu/project/pingpongplus/">PingPongPlus</a></li>
+    <li id="pppp"><a href="http://pppp.media.mit.edu/">PingPong++</a></li>
+  </ol>
+
+  <h2>発表文献</h2>
+  <ul>
+    <li id="gcce2013-kato-openpool" data-numpages="2"><u>Jun Kato</u>, Takashi Nakashima, Hideki Takeoka, Kazunori Ogasawara, Kazuma Murao, Toshinari Shimokawa, Masaaki Sugimoto, <b>&quot;OpenPool: Community-based Prototyping of Digitally-augmented Billiard Table&quot;</b>, In <i>GCCE '13: Proceedings of the 2nd IEEE Global Conference on Consumer Electronics</i>. pp.175-176, Oct. 2013. <div class="btn-group biblinks"><a href="http://dx.doi.org/10.1109/GCCE.2013.6664790"><i class="glyphicon glyphicon-barcode"></i> <abbr title="Digital Object Identifier">DOI</abbr></a> <a href="http://junkato.jp/publications/gcce2013-kato-openpool.pdf"><i class="glyphicon glyphicon-file"></i> PDF</a> <a href="http://junkato.jp/publications/gcce2013-kato-openpool-slides.pdf"><i class="glyphicon glyphicon-play-circle"></i> Slides</a></div> <a href="#" class="bibtex" data-title="&lt;textarea onclick=&quot;this.focus();this.select();return false;&quot; readonly=&quot;readonly&quot;&gt;@inproceedings{gcce2013-kato-openpool,
+  title={OpenPool: Community-based Prototyping of Digitally-augmented Billiard Table},
+  author={Jun Kato and Takashi Nakashima and Hideki Takeoka and Kazunori Ogasawara and Kazuma Murao and Toshinari Shimokawa and Masaaki Sugimoto}
+  booktitle={GCCE '13: Proceedings of the 2nd IEEE Global Conference on Consumer Electronics},
+  pages={175--176},
+  year={2013}
+}&lt;/textarea&gt;"><i class="glyphicon glyphicon-book"></i> BibTeX</a></li>
+  </ul>
+
+  <h2 id="press">Press Coverage</h2>
+  <div class="row">
+    <div class="col-xs-3 col-sm-4 col-md-4"><a href="http://www.engadget.com/2013/03/09/openpool/" title="engadget" class="thumbnail"><img width="150" height="45" src="http://www.openpool.cc/wp-content/uploads/engadget-150x45.jpg" alt="engadget" /></a></div>
+    <div class="col-xs-3 col-sm-4 col-md-4"><a href="http://gizmodo.com/OpenPool/" title="Gizmodo" class="thumbnail"><img width="150" height="21" src="http://www.openpool.cc/wp-content/uploads/Gizmodo-150x21.png" alt="Gizmodo" /></a></div>
+    <div class="col-xs-3 col-sm-4 col-md-4"><a href="http://austin.culturemap.com/newsdetail/03-13-13-the-5-coolest-things-at-the-sxswi-trade-show/" title="austin" class="thumbnail"><img width="150" height="28" src="http://www.openpool.cc/wp-content/uploads/austin-150x28.png" alt="austin" /></a></div>
+    <div class="col-xs-3 col-sm-4 col-md-4"><a href="http://blog.laptopmag.com/openpool-lets-fish-and-lights-dance-and-play-with-moving-objects" title="laptop" class="thumbnail"><img width="150" height="49" src="http://www.openpool.cc/wp-content/uploads/laptop.png" alt="laptop" /></a></div>
+    <div class="col-xs-3 col-sm-4 col-md-4"><a href="http://www.techhive.com/article/2030378/five-highlights-from-the-sxsw-gaming-expo.html" title="techhive" class="thumbnail"><img width="150" height="49" src="http://www.openpool.cc/wp-content/uploads/techhive.png" alt="techhive" /></a></div>
+    <div class="col-xs-3 col-sm-4 col-md-4"><a href="http://blip.tv/dargadgetz/openpool-open-source-super-billiards-at-sxsw-2013-6551425" title="blip" class="thumbnail"><img width="150" height="76" src="http://www.openpool.cc/wp-content/uploads/blip.png" alt="blip" /></a></div>
+    <div class="col-xs-3 col-sm-4 col-md-4"><a href="http://gearburn.com/2013/03/7-of-the-best-gadgets-of-sxsw/" title="gearburn" class="thumbnail"><img width="150" height="33" src="http://www.openpool.cc/wp-content/uploads/gearburn.png" alt="gearburn" /></a></div>
+    <div class="col-xs-3 col-sm-4 col-md-4"><a href="http://www.jeuxvideo.org/index.php/2013/03/14/kinect-un-projecteur-et-un-billard-openpool/" title="jeuxvideo" class="thumbnail"><img width="150" height="41" src="http://www.openpool.cc/wp-content/uploads/jeuxvideo.png" alt="jeuxvideo" /></a></div>
+    <div class="col-xs-3 col-sm-4 col-md-4"><a href="http://www.roclay.com/techbuzz/openpool-change-your-billiards-game-with-kinects-camera-controlled-lights" title="qclay" class="thumbnail"><img width="150" height="48" src="http://www.openpool.cc/wp-content/uploads/qclay.png" alt="qclay" /></a></div>
+    <div class="col-xs-3 col-sm-4 col-md-4"><a href="http://www.thecoolgeek.net/openpool-transforms-billiards-with-a-kinect-camera-controlled-light-show/" title="thecoolgeek" class="thumbnail"><img width="150" height="33" src="http://www.openpool.cc/wp-content/uploads/thecoolgeek.png" alt="thecoolgeek" /></a></div>
+  </div>
+</section>
+
+<footer>
+  <hr />
+  <p>&copy; <a href="mailto:i@junkato.jp">加藤 淳</a> 2012-2017 | <a href="/openpool/">English<i class="translation glyphicon glyphicon-text-background"></i></a></p>
+</footer>
+
+<!-- Scripts -->
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2538649-10', 'auto');
+  ga('send', 'pageview');
+
+  $(function(){
+    var a = $('a.bibtex'), lastTooltip = null;
+    a.tooltip({ trigger: "manual", html: true, template: '<div class="tooltip bibtex"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>' });
+    a.click(function(e){ e.preventDefault(); if (lastTooltip !== this) $(lastTooltip).tooltip('hide'); lastTooltip = this; $(lastTooltip).tooltip('toggle'); return false; });
+  });
+</script>
+<script src="http://twitter.github.com/bootstrap/assets/js/google-code-prettify/prettify.js"></script>
+<script>
+
+$(function(){
+  $('h1 p span.label').tooltip();
+  window.prettyPrint && prettyPrint();
+});
+
+</script>
+
+    </div><!-- /container -->
+  </body>
+</html>

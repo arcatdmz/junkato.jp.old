@@ -1,0 +1,134 @@
+<!DOCTYPE html><html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="Jun Kato" />
+    <meta property="fb:admins" content="503220390" />
+    <link rev="made" href="mailto:i@junkato.jp" />
+    <title>Fun | junkato.jp</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Droid+Sans" />
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/main.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="navbar navbar-default navbar-fixed-top" data-dropdown="dropdown" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Jun Kato</a>
+        </div>
+        <div id="navigation" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/#about">Profile</a></li>
+            <li><a href="/#projects">Projects</a></li>
+            <li><a href="/publications/">Awards &amp; Publications</a></li>
+            <li class="active"><a href="/fun/">Fun</a></li>
+            <li><a href="/#contact">Contact</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/ja/fun/">日本語<i class="translation icon-ja"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- container --><div class="container">
+
+<section>
+  <h1>Fun</h1>
+  <h2>My map</h2>
+  <div class="row">
+    <div class="col-md-6">
+      <p>Places I've visited and lived are pinned in the map. Below is the list of academic conferences I've attended.</p>
+
+  <dl>
+    <dt>ACM CHI</dt><dd>
+      <a href="http://www.chi2009.org/">2009</a> (Boston, MA),
+      <a href="http://chi2013.acm.org/">2013</a> (Paris, France),
+      <a href="http://chi2015.acm.org/">2015</a> (Seoul, Korea),
+      <a href="http://chi2016.acm.org/">2016</a> (San Jose, CA)</dd>
+    <dt>ACM UIST</dt><dd>
+      <a href="http://www.acm.org/uist/uist2009/">2009</a> (Victoria, Canada),
+      <a href="http://www.acm.org/uist/uist2010/">2010</a> (New York, NY),
+      <a href="http://www.acm.org/uist/uist2012/">2012</a> (Boston, MA),
+      <a href="http://www.acm.org/uist/uist2013/">2013</a> (St. Andrews, UK),
+      <a href="http://www.acm.org/uist/uist2015/">2015</a> (Charlotte, NC)</dd>
+    <dt>ACM DIS</dt><dd>
+      <a href="http://www.dis2012.org/">2012</a> (Newcastle upon Tyne, UK)</dd>
+    <dt>Other conferences</dt><dd>
+      <a href="http://www.siggraph.org/asia2009/">SIGGRAPH Asia 2009</a> (Yokohama),
+      <a href="http://pldi2013.ucombinator.org/">ACM PLDI 2013</a> (Seattle, WA),
+      <a href="http://www.ieee-gcce.org/2013/">IEEE GCCE 2013</a> (Tokyo),
+      <a href="http://www.cs.mcgill.ca/~kry/gi2014/">GI 2014</a> (Montreal, QC, Canada),
+      <a href="http://iclc.livecodenetwork.org">ICLC 2015</a> (Leeds, UK),
+      <a href="http://2016.ecoop.org/home">ECOOP 2016</a> (Rome, Italy)</dd>
+  </dl>
+
+    </div>
+    <div class="col-md-6">
+
+<iframe width="100%" height="380" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps/ms?msa=0&amp;z=1&amp;msid=202355631755907723425.0004f33a9094485a8238f&amp;ie=UTF8&amp;t=m&amp;ll=41.662301,177.143007&amp;spn=12.023374,121.470962&amp;output=embed"></iframe>
+
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Photo albums</h2>
+  <p>I love taking photos :)</p>
+  <div class="gallery"></div>
+</section>
+
+<footer>
+  <hr />
+  <p>&copy; <a href="mailto:i@junkato.jp">Jun Kato</a> 2012-2017 | <a href="/ja/">日本語<i class="translation icon-ja"></i></a></p>
+</footer>
+
+<!-- Scripts -->
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2538649-10', 'auto');
+  ga('send', 'pageview');
+
+  $(function(){
+    var a = $('a.bibtex'), lastTooltip = null;
+    a.tooltip({ trigger: "manual", html: true, template: '<div class="tooltip bibtex"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>' });
+    a.click(function(e){ e.preventDefault(); if (lastTooltip !== this) $(lastTooltip).tooltip('hide'); lastTooltip = this; $(lastTooltip).tooltip('toggle'); return false; });
+  });
+</script>
+<script src="/js/jqpgallery/jquery.picasagallery.js"></script>
+<script>
+
+$(function(){
+
+  $('div.gallery').picasagallery({
+    username: 'digitalmuseum.lab',
+    hide_albums: ['いろいろ', 'Profile Photos', 'プロフィール写真', 'Scrapbook Photos', 'スクラップブック写真', 'Instant Upload', 'Photos from posts', '2010-01 箱根'],
+    onload: function(){ $('div.gallery h5').tooltip(); }
+  });
+
+});
+
+</script>
+
+    </div><!-- /container -->
+  </body>
+</html>
