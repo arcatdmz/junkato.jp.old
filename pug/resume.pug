@@ -6,78 +6,79 @@ html(lang='en')
     meta(name='viewport', content='width=device-width,user-scalable=yes')
     link(rev='made', href='mailto:i@junkato.jp')
     title Resume of Jun Kato | junkato.jp
-    style @import url(http://fonts.googleapis.com/css?family=Merriweather:400,700,400italic&subset=latin,latin-ext);
+    style.
+      @import url(http://fonts.googleapis.com/css?family=Merriweather:400,700,400italic&amp;subset=latin,latin-ext);
 
-		body { margin: 0; padding: 0; font-size: 10.5pt; font-family: 'Merriweather', serif; line-height: 160%; }
-		#menu { position: fixed; bottom: 0; width: 100%; background: #f6f6f6; border: solid #000; border-width: 1px 0 0 0; }
-		#menu ul { height: 1em; margin: 0 auto; padding: 0 5px; }
-		#menu li { float: left; margin: 5px 0; padding: 2px 7px; border: #ccc solid; border-width: 0 0 0 1px; }
-		#menu li:first-child { border: none; }
-		#menu ul, #menu li { list-style-type: none; }
-		#menu a { border: none; }
+      body { margin: 0; padding: 0; font-size: 10.5pt; font-family: 'Merriweather', serif; line-height: 160%; }
+      #menu { position: fixed; bottom: 0; width: 100%; background: #f6f6f6; border: solid #000; border-width: 1px 0 0 0; }
+      #menu ul { height: 1em; margin: 0 auto; padding: 0 5px; }
+      #menu li { float: left; margin: 5px 0; padding: 2px 7px; border: #ccc solid; border-width: 0 0 0 1px; }
+      #menu li:first-child { border: none; }
+      #menu ul, #menu li { list-style-type: none; }
+      #menu a { border: none; }
 
-		#container { margin: .5cm auto; padding-bottom: 2em; width: 180mm; }
-		#updated { text-align: right; }
+      #container { margin: .5cm auto; padding-bottom: 2em; width: 180mm; }
+      #updated { text-align: right; }
 
-		h1, h2, hr { border: solid #000; border-width: 0 0 .75pt 0; }
-		h1, h2 { margin: 1em 0 .5em 0; font-size: 21pt; }
-		h1 { padding: 0 0 .6em 0; }
-		h2 { padding: .4em 0; }
-		h2 { font-size: 16pt; }
+      h1, h2, hr { border: solid #000; border-width: 0 0 .75pt 0; }
+      h1, h2 { margin: 1em 0 .5em 0; font-size: 21pt; }
+      h1 { padding: 0 0 .6em 0; }
+      h2 { padding: .4em 0; }
+      h2 { font-size: 16pt; }
 
-		h3 { margin: .4em 0 .2em 0; font-size: 12pt; }
-		h4 { margin: .1em 0; font-size: 11pt; }
+      h3 { margin: .4em 0 .2em 0; font-size: 12pt; }
+      h4 { margin: .1em 0; font-size: 11pt; }
 
-		h4.wp { margin: .3em 0 0 0; }
-		h4.wp p { margin: .3em 0; color: #999; font-size: 10.5pt; }
+      h4.wp { margin: .3em 0 0 0; }
+      h4.wp p { margin: .3em 0; color: #999; font-size: 10.5pt; }
 
-		p, ul, dl { margin: .3em 0 .8em 0; padding: 0; }
-		ul { margin-left: 2em; }
+      p, ul, dl { margin: .3em 0 .8em 0; padding: 0; }
+      ul { margin-left: 2em; }
 
-		a { color: #069; text-decoration: none; border-bottom: .75pt dashed #069; }
-		a:hover { color: #c00; border-bottom-style: solid; border-bottom-color: #c00; }
+      a { color: #069; text-decoration: none; border-bottom: .75pt dashed #069; }
+      a:hover { color: #c00; border-bottom-style: solid; border-bottom-color: #c00; }
 
-		dt, dd, .left, .right { margin: 0; padding: 0; }
-		dt, .left { float: left; }
-		dd, .right { margin: .3em 0; }
+      dt, dd, .left, .right { margin: 0; padding: 0; }
+      dt, .left { float: left; }
+      dd, .right { margin: .3em 0; }
 
-		dt { width: 15%; }
-		dd { margin-left: 15%; }
-		dt::after { content: ":"; }
+      dt { width: 15%; }
+      dd { margin-left: 15%; }
+      dt::after { content: ":"; }
 
-		span.award { color: #e99; }
-		.left { width: 50%; }
-		.right { margin-left: 50%; }
-		.left *:first-child { margin-top: 0; }
-		.secondary p { font-size: smaller; }
+      span.award { color: #e99; }
+      .left { width: 50%; }
+      .right { margin-left: 50%; }
+      .left *:first-child { margin-top: 0; }
+      .secondary p { font-size: smaller; }
 
-		hr { clear: both; margin-top: 2em; }
+      hr { clear: both; margin-top: 2em; }
 
-		@media only screen and (max-width: 960px) {
-			#menu { position: static; background: none; border: none; }
-			#menu li { margin-bottom: 0; }
-			#menu li:first-child { padding-left: 0; }
-			#menu li:first-child::before { content: "Table of Contents: "; }
-			#container { padding-bottom: 0; }
-			#updated { clear: left; margin-top: 0; padding-top: .3em; }
-			dt { width: 25%; }
-			dd { margin-left: 25%; }
-		}
-		@media only screen and (max-width: 180mm) {
-			#container { width: inherit; }
-		}
-		@media print {
-			#menu { display: none; }
-			#container { margin-top: 0; padding-bottom: 0; }
-			#updated { margin-top: 0; }
-			body { font-size: 9pt; }
-			h2 { font-size: 12pt; }
-			h3 { font-size: 10.5pt; }
-			h4 { font-size: 10pt; }
-			h4.wp p { font-size: 9pt; }
-			.page-break { page-break-before: always; }
-			a { border: none; }
-		}
+      @media only screen and (max-width: 960px) {
+        #menu { position: static; background: none; border: none; }
+        #menu li { margin-bottom: 0; }
+        #menu li:first-child { padding-left: 0; }
+        #menu li:first-child::before { content: "Table of Contents: "; }
+        #container { padding-bottom: 0; }
+        #updated { clear: left; margin-top: 0; padding-top: .3em; }
+        dt { width: 25%; }
+        dd { margin-left: 25%; }
+      }
+      @media only screen and (max-width: 180mm) {
+        #container { width: inherit; }
+      }
+      @media print {
+        #menu { display: none; }
+        #container { margin-top: 0; padding-bottom: 0; }
+        #updated { margin-top: 0; }
+        body { font-size: 9pt; }
+        h2 { font-size: 12pt; }
+        h3 { font-size: 10.5pt; }
+        h4 { font-size: 10pt; }
+        h4.wp p { font-size: 9pt; }
+        .page-break { page-break-before: always; }
+        a { border: none; }
+      }
   body
     #menu
       ul
@@ -224,8 +225,7 @@ html(lang='en')
       p Funded $18,000 for three years ($6,000 for each year) as a research fellow.
       h3
         | Microsoft Research Asia
-        a(href='http://research.microsoft.com/en-us/collaboration/global/asia-pacific/talent/fellows.aspx#b1ab333b-9141-4718-8c56-f27f3cfbbcc1', title='Microsoft Research Asia Fellows
-') Fellowship
+        a(href='http://research.microsoft.com/en-us/collaboration/global/asia-pacific/talent/fellows.aspx#b1ab333b-9141-4718-8c56-f27f3cfbbcc1', title='Microsoft Research Asia Fellows') Fellowship
         | (2012)
       p Awarded among around one hundred Ph.D candidates and funded $10,000 for a year.
       h3
